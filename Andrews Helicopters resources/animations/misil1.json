@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.misil1.move": {
+      "animation_length": 0.1,
+      "bones": {
+        "body": {
+          "rotation": [
+            "q.target_x_rotation",
+            "q.target_y_rotation",
+            0
+          ]
+        }
+      },
+      "loop": true,
+      "particle_effects": {
+        "0.0": {
+          "effect": "kashtan_sam2",
+          "locator": "sam"
+        }
+      }
+    }
+  }
+}
