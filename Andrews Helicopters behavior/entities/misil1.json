@@ -1,0 +1,204 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "hc:misil1",
+      "is_experimental": false,
+      "is_spawnable": false,
+      "is_summonable": true,
+      "animations": {
+        "hit": "animation.misil1_hit",
+        "move": "animation.misil1_move"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "hit": "query.variant ==1"
+          },
+          "move"
+        ]
+      }
+    },
+    "component_groups": {
+      "dead": {
+        "minecraft:explode": {
+          "breaks_blocks": false,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false,
+          "fire_affected_by_griefing": false,
+          "fuse_length": [
+            0,
+            0
+          ],
+          "fuse_lit": true,
+          "power": 1
+        }
+      },
+      "minecraft:explode": {
+        "minecraft:explode": {
+          "breaks_blocks": false,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false,
+          "fire_affected_by_griefing": false,
+          "fuse_length": [
+            0.02,
+            0.02
+          ],
+          "fuse_lit": true,
+          "power": 2
+        }
+      },
+      "misil1:hit": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "misil1:hit2": {
+        "minecraft:collision_box": {
+          "height": 0.5,
+          "width": 0.5
+        },
+        "minecraft:projectile": {
+          "gravity": 0,
+          "inertia": 0.7,
+          "liquid_inertia": 0.5,
+          "onHit": {
+            "definition_event": {
+              "affect_projectile": true,
+              "event_trigger": {
+                "event": "explode",
+                "target": "self"
+              }
+            },
+            "impact_damage": {
+              "damage": 200,
+              "destroy_on_hit": false,
+              "knockback": true
+            }
+          },
+          "power": 10
+        }
+      }
+    },
+    "components": {
+      "minecraft:behavior.hurt_by_target": {
+        "entity_types": {
+          "filters": {
+            "operator": "!=",
+            "subject": "other",
+            "test": "is_family",
+            "value": "russian"
+          }
+        },
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": [
+                "phantom",
+                "wither",
+                "dragon",
+                "monster"
+              ]
+            },
+            "max_dist": 100
+          }
+        ],
+        "max_dist": 100,
+        "priority": 0,
+        "target_search_height": 100,
+        "within_radius": 100
+      },
+      "minecraft:behavior.swoop_attack": {
+        "delay_range": [
+          0,
+          0
+        ],
+        "priority": 3
+      },
+      "minecraft:breathable": {
+        "suffocateTime": 0,
+        "totalSupply": 15
+      },
+      "minecraft:collision_box": {
+        "height": 0.5,
+        "width": 0.10
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "event": "dead",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_damage",
+                    "value": "fatal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minecraft:follow_range": {
+        "max": 1000,
+        "value": 1000
+      },
+      "minecraft:health": {
+        "max": 5,
+        "value": 5
+      },
+      "minecraft:is_sheared": {},
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:nameable": {},
+      "minecraft:scale": {
+        "value": 1
+      },
+      "minecraft:target_nearby_sensor": {
+        "inside_range": 1,
+        "on_inside_range": {
+          "event": "hit",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family": {
+        "family": [
+          "misil1"
+        ]
+      },
+      "minecraft:variant": {
+        "value": 0
+      }
+    },
+    "events": {
+      "dead": {
+        "add": {
+          "component_groups": [
+            "dead",
+            "misil1:hit"
+          ]
+        }
+      },
+      "explode": {
+        "add": {
+          "component_groups": [
+            "minecraft:explode",
+            "misil1:hit"
+          ]
+        }
+      },
+      "hit": {
+        "add": {
+          "component_groups": [
+            "misil1:hit2"
+          ]
+        }
+      }
+    }
+  }
+}

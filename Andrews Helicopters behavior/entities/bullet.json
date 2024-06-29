@@ -1,0 +1,75 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "hc:bullet",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:arrow"
+    },
+    "components": {
+      "minecraft:projectile": {
+        "particle": "explode",
+        "onHit": {
+          "impact_damage": {
+            "damage": 8,
+            "knockback": false
+          },
+          "particle_on_hit": {
+            "particle_type": "explode",
+            "on_other_hit": true
+          },
+          "remove_on_hit": {}
+        },
+        "hit_sound": "bow.hit",
+        "power": 3.3,
+        "gravity": 0.004,
+        "inertia": 1,
+        "liquid_inertia": 0.9,
+        "anchor": 1,
+        "offset": [
+          0,
+          -1.5,
+          0
+        ],
+        "reflectOnHurt": true,
+        "uncertaintyBase": 0,
+        "remove_on_hit": {}
+      },
+      "minecraft:type_family": {
+        "family": [
+          "hcbullet"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 800.0,
+          "max_dropped_ticks": 70,
+          "use_motion_prediction_hints": false
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:despawn": {
+        "remove_child_entities": true,
+        "filters": {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "bullet_despawning"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

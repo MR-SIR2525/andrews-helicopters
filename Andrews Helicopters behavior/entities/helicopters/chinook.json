@@ -1,0 +1,2006 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "hc:chinook",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          {
+            "sound": "query.skin_id == 2"
+          },
+          {
+            "sound_inside": "query.skin_id == 2"
+          },
+          {
+            "fly": "query.skin_id == 2 && query.has_rider"
+          },
+          "humo",
+          "falling",
+          "light",
+          {
+            "static": "query.has_rider && !query.is_on_ground && q.mark_variant >= 1"
+          },
+          "ground",
+          "wind",
+          "empty_hydrogen",
+          "pilot"
+        ]
+      },
+      "animations": {
+        "sound": "controller.animation.chinook_sound",
+        "sound_inside": "controller.animation.chinook_sound_inside",
+        "fly": "controller.animation.chinook_fly",
+        "humo": "controller.animation.chinook_humo",
+        "falling": "controller.animation.chinook_falling",
+        "light": "controller.animation.light",
+        "ground": "controller.animation.ground",
+        "wind": "controller.animation.chinook_wind",
+        "empty_hydrogen": "controller.animation.empty_hydrogen",
+        "static": "animation.fly.static",
+        "pilot": "controller.animation.pilot"
+      }
+    },
+    "component_groups": {
+      "off": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      },
+      "startup": {
+        "minecraft:skin_id": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 7.9,
+          "time_down_event": {
+            "event": "hc:on"
+          }
+        }
+      },
+      "on": {
+        "minecraft:skin_id": {
+          "value": 2
+        },
+        "minecraft:input_ground_controlled": {},
+        "minecraft:movement": {
+          "value": 0.17
+        },
+        "minecraft:can_power_jump": {},
+        "minecraft:horse.jump_strength": {
+          "value": {
+            "range_min": 0,
+            "range_max": 0
+          }
+        },
+        "minecraft:is_tamed": {}
+      },
+      "turning_off": {
+        "minecraft:skin_id": {
+          "value": 3
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 8,
+          "time_down_event": {
+            "event": "hc:off"
+          }
+        }
+      },
+      "default": {
+        "minecraft:skin_id": {
+          "value": 4
+        }
+      },
+      "load_villagers": {
+        "minecraft:skin_id": {
+          "value": 5
+        }
+      },
+      "download_villagers": {
+        "minecraft:skin_id": {
+          "value": 6
+        }
+      },
+      "charged_hydrogen": {
+        "minecraft:is_charged": {}
+      },
+      "consuming_hydrogen": {
+        "minecraft:timer": {
+          "time": 60,
+          "looping": true,
+          "time_down_event": {
+            "event": "hc:hydrogen_consuming",
+            "target": "self"
+          }
+        }
+      },
+      "white": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "blue": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "red": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "yellow": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "purple": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "black": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "gray": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "lime": {
+        "minecraft:variant": {
+          "value": 7
+        }
+      },
+      "orange": {
+        "minecraft:variant": {
+          "value": 8
+        }
+      },
+      "hydrogen0": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      },
+      "hydrogen1": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "hydrogen2": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "hydrogen3": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+      "hydrogen4": {
+        "minecraft:mark_variant": {
+          "value": 4
+        }
+      },
+      "hydrogen5": {
+        "minecraft:mark_variant": {
+          "value": 5
+        }
+      },
+      "hydrogen6": {
+        "minecraft:mark_variant": {
+          "value": 6
+        }
+      },
+      "hydrogen7": {
+        "minecraft:mark_variant": {
+          "value": 7
+        }
+      },
+      "hydrogen8": {
+        "minecraft:mark_variant": {
+          "value": 8
+        }
+      },
+      "hydrogen9": {
+        "minecraft:mark_variant": {
+          "value": 9
+        }
+      },
+      "hydrogen10": {
+        "minecraft:mark_variant": {
+          "value": 10
+        }
+      },
+      "hydrogen11": {
+        "minecraft:mark_variant": {
+          "value": 11
+        }
+      },
+      "hydrogen12": {
+        "minecraft:mark_variant": {
+          "value": 12
+        }
+      },
+      "hydrogen13": {
+        "minecraft:mark_variant": {
+          "value": 13
+        }
+      },
+      "hydrogen14": {
+        "minecraft:mark_variant": {
+          "value": 14
+        }
+      },
+      "hydrogen15": {
+        "minecraft:mark_variant": {
+          "value": 15
+        }
+      },
+      "hydrogen16": {
+        "minecraft:mark_variant": {
+          "value": 16
+        }
+      }
+    },
+    "components": {
+      "minecraft:inventory": {
+        "container_type": "container",
+        "inventory_size": 27
+      },
+      "minecraft:type_family": {
+        "family": [
+          "hc"
+        ]
+      },
+      "minecraft:health": {
+        "value": 80
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": true
+          },
+          {
+            "cause": "lava",
+            "deals_damage": true
+          },
+          {
+            "cause": "projectile",
+            "deals_damage": true
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": true
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": true
+          }
+        ]
+      },
+      "minecraft:scale": {
+        "value": 0.9
+      },
+      "minecraft:physics": {},
+      "minecraft:navigation.walk": {
+        "is_amphibious": false,
+        "avoid_water": false
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:collision_box": {
+        "width": 5,
+        "height": 6
+      },
+      "minecraft:behavior.mount_pathing": {
+        "priority": 1,
+        "speed_multiplier": 2.25,
+        "target_dist": 0,
+        "track_target": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "heal_amount": 400,
+            "item": "hc:repair_kit"
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 4,
+        "suffocate_time": 4
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/chinook.json"
+      },
+      "minecraft:is_tamed": {},
+      "minecraft:boostable": {
+        "speed_multiplier": 4,
+        "duration": 4,
+        "boost_items": [
+          {
+            "replace_item": "hc:nitro",
+            "damage": 1,
+            "item": "hc:nitro"
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_mark_variant",
+                    "operator": "<",
+                    "value": 16
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:galondehidrogeno"
+                  }
+                ]
+              },
+              "event": "hc:to_fuel_h",
+              "target": "self"
+            },
+            "use_item": true,
+            "transform_to_item": "hc:galondehidrogeno_empty",
+            "play_sounds": "full_hydrogen",
+            "interact_text": "action.interact.§bfuel_hydrogen"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 0
+                  },
+                  {
+                    "test": "is_mark_variant",
+                    "operator": ">",
+                    "value": 1
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:startup",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§aStart_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 4
+                  },
+                  {
+                    "test": "is_mark_variant",
+                    "operator": ">",
+                    "value": 1
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:startup",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§aStart_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 5
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:startup",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§aStart_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 0
+                  },
+                  {
+                    "test": "is_mark_variant",
+                    "operator": ">",
+                    "value": 1
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:startup",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§aStart_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 2
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:turning_off",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§eTurn_off_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": 5
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:turning_off",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§eTurn_off_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:gray_paint"
+                  }
+                ]
+              },
+              "event": "hc:gray",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:red_paint"
+                  }
+                ]
+              },
+              "event": "hc:red",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:lime_paint"
+                  }
+                ]
+              },
+              "event": "hc:lime",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:blue_paint"
+                  }
+                ]
+              },
+              "event": "hc:blue",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:yellow_paint"
+                  }
+                ]
+              },
+              "event": "hc:yellow",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:orange_paint"
+                  }
+                ]
+              },
+              "event": "hc:orange",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:purple_paint"
+                  }
+                ]
+              },
+              "event": "hc:purple",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:white_paint"
+                  }
+                ]
+              },
+              "event": "hc:white",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "rider_count",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:black_paint"
+                  }
+                ]
+              },
+              "event": "hc:black",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:load_villagers"
+                  }
+                ]
+              },
+              "event": "load_villagers",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.cargar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "value": 5
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:download_villagers"
+                  }
+                ]
+              },
+              "event": "download_villagers",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.descargar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "value": 4
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:download_villagers"
+                  }
+                ]
+              },
+              "event": "download_villagers",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.descargar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "is_skin_id",
+                    "subject": "self",
+                    "value": 0
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:download_villagers"
+                  }
+                ]
+              },
+              "event": "download_villagers",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true,
+            "interact_text": "action.interact.descargar"
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_skin_id",
+                  "operator": "==",
+                  "value": 2
+                },
+                {
+                  "test": "has_component",
+                  "operator": "!=",
+                  "value": "minecraft:timer"
+                },
+                {
+                  "test": "is_mark_variant",
+                  "operator": ">",
+                  "value": 1
+                }
+              ]
+            },
+            "event": "hc:start_consuming_hydrogen",
+            "target": "self"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_skin_id",
+                  "operator": "==",
+                  "value": 0
+                },
+                {
+                  "test": "is_mark_variant",
+                  "operator": "==",
+                  "value": 0
+                },
+                {
+                  "test": "has_component",
+                  "operator": "==",
+                  "value": "minecraft:timer"
+                }
+              ]
+            },
+            "event": "hc:stop_consuming_hydrogen",
+            "target": "self"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_mark_variant",
+                  "operator": ">",
+                  "value": 0
+                },
+                {
+                  "test": "has_component",
+                  "operator": "!=",
+                  "value": "minecraft:is_charged"
+                }
+              ]
+            },
+            "event": "hc:charged_hydrogen"
+          }
+        ]
+      },
+      "minecraft:is_saddled": {},
+      "minecraft:rideable": {
+        "family_types": [
+          "player",
+          "villager"
+        ],
+        "interact_text": "action.interact.fly",
+        "pull_in_entities": false,
+        "seat_count": 23,
+        "seats": [
+          {
+            "position": [
+              0.7,
+              1.9,
+              4
+            ]
+          },
+          {
+            "position": [
+              -0.7,
+              1.9,
+              4
+            ]
+          },
+          {
+            "position": [
+              0.9,
+              2.1,
+              3
+            ]
+          },
+          {
+            "position": [
+              -0.9,
+              2.1,
+              3
+            ]
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -2.55
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -2.55
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -4.1
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -4.1
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -5.55
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -5.55
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -7.1
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -7.1
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -8.55
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -8.55
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -10.1
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -10.1
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -11.55
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -11.55
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -13
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -13
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              1.2,
+              2.1,
+              -13.95
+            ],
+            "rotate_rider_by": 90,
+            "lock_rider_rotation": 130
+          },
+          {
+            "position": [
+              -1.2,
+              2.1,
+              -13.95
+            ],
+            "rotate_rider_by": -90,
+            "lock_rider_rotation": 130
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "remove": {
+          "component_groups": []
+        },
+        "add": {
+          "component_groups": [
+            "off",
+            "hydrogen0"
+          ]
+        }
+      },
+      "hc:startup": {
+        "remove": {
+          "component_groups": [
+            "on",
+            "turning_off",
+            "off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "startup"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playanimation @s animation.chinook.starting",
+            "title @p actionbar §aStarting Engines..."
+          ]
+        }
+      },
+      "hc:on": {
+        "remove": {
+          "component_groups": [
+            "off",
+            "startup",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "on"
+          ]
+        }
+      },
+      "hc:turning_off": {
+        "remove": {
+          "component_groups": [
+            "on",
+            "startup",
+            "off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "turning_off"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playanimation @s animation.chinook.landing",
+            "title @p actionbar §eTurning_off_Engines..."
+          ]
+        }
+      },
+      "hc:off": {
+        "remove": {
+          "component_groups": [
+            "startup",
+            "on",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off",
+            "default"
+          ]
+        }
+      },
+      "load_villagers": {
+        "remove": {
+          "component_groups": [
+            "download_villagers"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "load_villagers"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "title @p actionbar load villagers actived",
+            "ride @e[type=villager,r=15] start_riding @e[type=hc:chinook] teleport_rider"
+          ]
+        }
+      },
+      "download_villagers": {
+        "add": {
+          "component_groups": [
+            "default"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "ride @e[type=villager,r=10] stop_riding",
+            "title @p actionbar mode download villagers"
+          ]
+        }
+      },
+      "hc:red": {
+        "add": {
+          "component_groups": [
+            "red"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:blue": {
+        "add": {
+          "component_groups": [
+            "blue"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:white": {
+        "add": {
+          "component_groups": [
+            "white"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:yellow": {
+        "add": {
+          "component_groups": [
+            "yellow"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:lime": {
+        "add": {
+          "component_groups": [
+            "lime"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:gray": {
+        "add": {
+          "component_groups": [
+            "gray"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:orange": {
+        "add": {
+          "component_groups": [
+            "orange"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:purple": {
+        "add": {
+          "component_groups": [
+            "purple"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:black": {
+        "add": {
+          "component_groups": [
+            "black"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
+          ]
+        }
+      },
+      "hc:charged_hydrogen": {
+        "add": {
+          "component_groups": [
+            "charged_hydrogen"
+          ]
+        }
+      },
+      "hc:no_hydrogen": {
+        "remove": {
+          "component_groups": [
+            "charged_hydrogen",
+            "startup",
+            "on",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off",
+            "turning_off"
+          ]
+        }
+      },
+      "hc:start_consuming_hydrogen": {
+        "add": {
+          "component_groups": [
+            "consuming_hydrogen"
+          ]
+        }
+      },
+      "hc:stop_consuming_hydrogen": {
+        "remove": {
+          "component_groups": [
+            "consuming_hydrogen",
+            "on",
+            "startup",
+            "off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "turning_off"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playanimation @s animation.chinook.landing",
+            "title @p actionbar §eTurning_off_Engines..."
+          ]
+        }
+      },
+      "hc:hydrogen_consuming": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 1
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen0"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 2
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen1"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 3
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen2"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 4
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen3"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen0",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 5
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen4"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen0",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 6
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen5"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen0",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 7
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen6"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen0",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 8
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen7"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen0",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 9
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen8"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen0",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 10
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen9"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 11
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen10"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 12
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen11"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 13
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen12"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 14
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen13"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 15
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen14"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 16
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen15"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen16"
+              ]
+            }
+          }
+        ]
+      },
+      "hc:to_fuel_h": {
+        "add": {
+          "component_groups": [
+            "hydrogen16"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "hydrogen0",
+            "hydrogen1",
+            "hydrogen2",
+            "hydrogen3",
+            "hydrogen4",
+            "hydrogen5",
+            "hydrogen6",
+            "hydrogen7",
+            "hydrogen8",
+            "hydrogen9",
+            "hydrogen10",
+            "hydrogen11",
+            "hydrogen12",
+            "hydrogen13",
+            "hydrogen14",
+            "hydrogen15"
+          ]
+        }
+      }
+    }
+  }
+}

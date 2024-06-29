@@ -1,0 +1,1385 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "hc:apache",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          {
+            "sound": "query.skin_id == 2"
+          },
+          {
+            "static": "!query.is_on_ground && q.mark_variant > 0"
+          },
+          {
+            "fly": "query.skin_id == 2 && query.has_rider"
+          },
+          "humo",
+          "falling",
+          "light",
+          "ground",
+          "wind",
+          "empty_hydrogen",
+          "pilot"
+        ]
+      },
+      "animations": {
+        "sound": "controller.animation.apache_sound",
+        "fly": "controller.animation.apache_fly",
+        "humo": "controller.animation.apache_humo",
+        "falling": "controller.animation.apache_falling",
+        "light": "controller.animation.light",
+        "ground": "controller.animation.ground",
+        "wind": "controller.animation.apache_wind",
+        "static": "animation.fly_apache.static",
+        "pilot": "controller.animation.pilot",
+        "empty_hydrogen": "controller.animation.empty_hydrogen"
+      }
+    },
+    "component_groups": {
+      "off": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      },
+      "startup": {
+        "minecraft:skin_id": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 3.9,
+          "time_down_event": {
+            "event": "hc:on"
+          }
+        }
+      },
+      "on": {
+        "minecraft:skin_id": {
+          "value": 2
+        },
+        "minecraft:input_ground_controlled": {},
+        "minecraft:movement": {
+          "value": 0.16
+        },
+        "minecraft:can_power_jump": {},
+        "minecraft:horse.jump_strength": {
+          "value": {
+            "range_min": 0,
+            "range_max": 0
+          }
+        },
+        "minecraft:is_tamed": {}
+      },
+      "turning_off": {
+        "minecraft:skin_id": {
+          "value": 3
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 4,
+          "time_down_event": {
+            "event": "hc:off"
+          }
+        }
+      },
+      "load_guns": {
+        "minecraft:addrider": {
+          "entity_type": "hc:machine_gun"
+        }
+      },
+      "default": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "desert": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "forest": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "marin": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "charged_hydrogen": {
+        "minecraft:is_charged": {}
+      },
+      "consuming_hydrogen": {
+        "minecraft:timer": {
+          "time": 60,
+          "time_down_event": {
+            "event": "hc:hydrogen_consuming",
+            "target": "self"
+          }
+        }
+      },
+      "addrider": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "min_wait_time": 0,
+              "max_wait_time": 0,
+              "spawn_entity": "hc:machine_gun",
+              "spawn_event": "disable_override",
+              "single_use": true,
+              "num_to_spawn": 1
+            }
+          ]
+        }
+      },
+      "hc_gravitytrue": {
+        "minecraft:physics": {
+          "has_gravity": true
+        }
+      },
+      "hc_gravityfalse": {
+        "minecraft:physics": {
+          "has_gravity": false
+        }
+      },
+      "hydrogen0": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      },
+      "hydrogen1": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "hydrogen2": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "hydrogen3": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+      "hydrogen4": {
+        "minecraft:mark_variant": {
+          "value": 4
+        }
+      },
+      "hydrogen5": {
+        "minecraft:mark_variant": {
+          "value": 5
+        }
+      },
+      "hydrogen6": {
+        "minecraft:mark_variant": {
+          "value": 6
+        }
+      },
+      "hydrogen7": {
+        "minecraft:mark_variant": {
+          "value": 7
+        }
+      },
+      "hydrogen8": {
+        "minecraft:mark_variant": {
+          "value": 8
+        }
+      },
+      "hydrogen9": {
+        "minecraft:mark_variant": {
+          "value": 9
+        }
+      },
+      "hydrogen10": {
+        "minecraft:mark_variant": {
+          "value": 10
+        }
+      },
+      "hydrogen11": {
+        "minecraft:mark_variant": {
+          "value": 11
+        }
+      },
+      "hydrogen12": {
+        "minecraft:mark_variant": {
+          "value": 12
+        }
+      },
+      "hydrogen13": {
+        "minecraft:mark_variant": {
+          "value": 13
+        }
+      },
+      "hydrogen14": {
+        "minecraft:mark_variant": {
+          "value": 14
+        }
+      },
+      "hydrogen15": {
+        "minecraft:mark_variant": {
+          "value": 15
+        }
+      },
+      "hydrogen16": {
+        "minecraft:mark_variant": {
+          "value": 16
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_saddled": {},
+      "minecraft:rideable": {
+        "family_types": [
+          "player",
+          "machine_gun"
+        ],
+        "interact_text": "action.interact.fly",
+        "pull_in_entities": false,
+        "rider_can_interact": true,
+        "seat_count": 2,
+        "seats": [
+          {
+            "position": [
+              0,
+              1.4,
+              3
+            ]
+          },
+          {
+            "position": [
+              0,
+              1.8,
+              1.55
+            ]
+          }
+        ]
+      },
+      "minecraft:type_family": {
+        "family": [
+          "hc",
+          "apache",
+          "inanimate"
+        ]
+      },
+      "minecraft:health": {
+        "value": 80
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "bullet"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "hc"
+                  }
+                ]
+              }
+            },
+            "deals_damage": false
+          },
+          {
+            "cause": "fall",
+            "deals_damage": true
+          },
+          {
+            "cause": "lava",
+            "deals_damage": true
+          },
+          {
+            "cause": "temperature",
+            "deals_damage": false
+          },
+          {
+            "cause": "projectile",
+            "deals_damage": true
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": true
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": true
+          }
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:scale": {
+        "value": 0.9
+      },
+      "minecraft:movement": {
+        "value": 0.19
+      },
+      "minecraft:jump.static": {},
+      "minecraft:collision_box": {
+        "width": 2.8,
+        "height": 4
+      },
+      "minecraft:leashable": {
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10
+      },
+      "minecraft:balloonable": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "heal_amount": 400,
+            "item": "hc:repair_kit"
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 4,
+        "suffocate_time": 4
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/apache.json"
+      },
+      "minecraft:boostable": {
+        "speed_multiplier": 4,
+        "duration": 4,
+        "boost_items": [
+          {
+            "replace_item": "hc:nitro",
+            "damage": 1,
+            "item": "hc:nitro"
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_mark_variant",
+                    "operator": "<",
+                    "value": 16
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:galondehidrogeno"
+                  }
+                ]
+              },
+              "event": "hc:to_fuel_h",
+              "target": "self"
+            },
+            "use_item": true,
+            "transform_to_item": "hc:galondehidrogeno_empty",
+            "play_sounds": "full_hydrogen",
+            "interact_text": "action.interact.§bfuel_hydrogen"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_tag",
+                    "subject": "self",
+                    "operator": "!=",
+                    "value": "engine_on"
+                  },
+                  {
+                    "test": "is_mark_variant",
+                    "operator": ">",
+                    "value": 1
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:startup",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§aStart_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_tag",
+                    "subject": "self",
+                    "value": "engine_on"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "hc:key"
+                  }
+                ]
+              },
+              "event": "hc:turning_off",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "action.interact.§eTurn_off_engines"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:pintura_gris"
+                  }
+                ]
+              },
+              "event": "default",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:desert_camouflaje"
+                  }
+                ]
+              },
+              "event": "desert",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:forest_camouflaje"
+                  }
+                ]
+              },
+              "event": "forest",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "hc:marin_camouflaje"
+                  }
+                ]
+              },
+              "event": "marin",
+              "target": "self"
+            },
+            "use_item": true,
+            "swing": true,
+            "interact_text": "action.interact.pintar"
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_skin_id",
+                  "operator": "==",
+                  "value": 2
+                },
+                {
+                  "test": "has_component",
+                  "operator": "!=",
+                  "value": "minecraft:timer"
+                },
+                {
+                  "test": "is_mark_variant",
+                  "operator": ">",
+                  "value": 1
+                }
+              ]
+            },
+            "event": "hc:start_consuming_hydrogen",
+            "target": "self"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_skin_id",
+                  "operator": "==",
+                  "value": 0
+                },
+                {
+                  "test": "is_mark_variant",
+                  "operator": "==",
+                  "value": 0
+                },
+                {
+                  "test": "has_component",
+                  "operator": "==",
+                  "value": "minecraft:timer"
+                }
+              ]
+            },
+            "event": "hc:stop_consuming_hydrogen",
+            "target": "self"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_mark_variant",
+                  "operator": ">",
+                  "value": 0
+                },
+                {
+                  "test": "has_component",
+                  "operator": "!=",
+                  "value": "minecraft:is_charged"
+                }
+              ]
+            },
+            "event": "hc:charged_hydrogen"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "hydrogen0",
+            "load_guns",
+            "off" //without this, player can't start the engine
+          ]
+        }
+      },
+      "hc:startup": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "on",
+                "turning_off",
+                "off"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "startup"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s animation.apache.starting",
+                "title @p actionbar §aStarting Engines..."
+              ]
+            }
+          }
+        ]
+      },
+      "hc:on": {
+        "remove": {
+          "component_groups": [
+            "off",
+            "startup",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "on",
+            "ride_players"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "tag @s add engine_on"
+          ]
+        }
+      },
+      "hc:turning_off": {
+        "remove": {
+          "component_groups": [
+            "on",
+            "startup",
+            "off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "turning_off"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playanimation @s animation.apache.landing",
+            "title @p actionbar §eTurning_off_Engines..."
+          ]
+        }
+      },
+      "hc:off": {
+        "remove": {
+          "component_groups": [
+            "consuming_hydrogen",
+            "startup",
+            "on",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "tag @s remove engine_on"
+          ]
+        }
+      },
+      "tamed": {
+        "add": {
+          "component_groups": [
+            "tamed"
+          ]
+        }
+      },
+      "load_guns": {
+        "add": {
+          "component_groups": [
+            "load_guns"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "ride_players"
+          ]
+        }
+      },
+      "ride_players": {
+        "remove": {
+          "component_groups": [
+            "load_guns"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ride_players"
+          ]
+        }
+      },
+      "default": {
+        "add": {
+          "component_groups": [
+            "default"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 3.0 1.0 1.0"
+          ]
+        }
+      },
+      "desert": {
+        "add": {
+          "component_groups": [
+            "desert"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 3.0 3.0 3.0"
+          ]
+        }
+      },
+      "forest": {
+        "add": {
+          "component_groups": [
+            "forest"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 3.0 3.0 3.0"
+          ]
+        }
+      },
+      "marin": {
+        "add": {
+          "component_groups": [
+            "marin"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playsound extra.spray_painting @p ~~~ 3.0 3.0 3.0"
+          ]
+        }
+      },
+      "hc:charged_hydrogen": {
+        "add": {
+          "component_groups": [
+            "charged_hydrogen"
+          ]
+        }
+      },
+      "hc:no_hydrogen": {
+        "remove": {
+          "component_groups": [
+            "charged_hydrogen",
+            "startup",
+            "on",
+            "turning_off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off",
+            "turning_off"
+          ]
+        }
+      },
+      "hc:start_consuming_hydrogen": {
+        "add": {
+          "component_groups": [
+            "consuming_hydrogen"
+          ]
+        }
+      },
+      "hc:stop_consuming_hydrogen": {
+        "remove": {
+          "component_groups": [
+            "consuming_hydrogen",
+            "on",
+            "startup",
+            "off"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playanimation @s animation.apache.landing",
+            "title @p actionbar §eTurning_off_Engines..."
+          ]
+        }
+      },
+      "hc:hydrogen_consuming": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 1
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen0"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 2
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen1"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 3
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen2"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 4
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen3"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen0",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 5
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen4"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen0",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 6
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen5"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen0",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 7
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen6"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen0",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 8
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen7"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen0",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 9
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen8"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen0",
+                "hydrogen9",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 10
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen9"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 11
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen10"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen0",
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen9",
+                "hydrogen11",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 12
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen11"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen12",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 13
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen12"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 14
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen13"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen14",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 15
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen14"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen15",
+                "hydrogen16"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_mark_variant",
+              "operator": "==",
+              "value": 16
+            },
+            "add": {
+              "component_groups": [
+                "hydrogen15"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "hydrogen1",
+                "hydrogen2",
+                "hydrogen3",
+                "hydrogen4",
+                "hydrogen5",
+                "hydrogen6",
+                "hydrogen7",
+                "hydrogen8",
+                "hydrogen0",
+                "hydrogen10",
+                "hydrogen11",
+                "hydrogen13",
+                "hydrogen14",
+                "hydrogen16"
+              ]
+            }
+          }
+        ]
+      },
+      "hc:to_fuel_h": {
+        "add": {
+          "component_groups": [
+            "hydrogen16"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "hydrogen0",
+            "hydrogen1",
+            "hydrogen2",
+            "hydrogen3",
+            "hydrogen4",
+            "hydrogen5",
+            "hydrogen6",
+            "hydrogen7",
+            "hydrogen8",
+            "hydrogen9",
+            "hydrogen10",
+            "hydrogen11",
+            "hydrogen12",
+            "hydrogen13",
+            "hydrogen14",
+            "hydrogen15"
+          ]
+        }
+      }
+    }
+  }
+}
