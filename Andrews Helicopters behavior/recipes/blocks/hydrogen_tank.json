@@ -1,0 +1,38 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hydrogen_tank"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ABA",
+      "CDC",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:cut_copper",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:obsidian",
+        "data": 0
+      },
+      "C": {
+        "item": "minecraft:dye",
+        "data": 16
+      },
+      "D": {
+        "item": "minecraft:bucket",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:hydrogen_tank",
+      "count": 1
+    }
+  }
+}

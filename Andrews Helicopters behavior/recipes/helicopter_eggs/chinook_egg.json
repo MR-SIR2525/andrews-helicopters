@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:chinook_egg" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "e e",
+      "scr",
+      "b b"
+    ],
+    "key": {
+      "e": {
+        "item": "hc:main_propeller",
+        "data": 0
+      },
+      "c": {
+        "item": "hc:fuselaje_chinook",
+        "data": 0
+      },
+      "r": {
+        "item": "hc:sheet",
+        "data": 0
+      },
+      "b": {
+        "item": "hc:wheel",
+        "data": 0
+      },
+      "s": {
+        "item": "hc:seat",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:chinook_spawn_egg",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

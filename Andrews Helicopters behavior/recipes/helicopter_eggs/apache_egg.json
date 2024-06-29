@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:apache_egg" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "e e",
+      "csr",
+      "b b"
+    ],
+    "key": {
+      "e": {
+        "item": "hc:main_propeller",
+        "data": 0
+      },
+      "c": {
+        "item": "hc:fuselaje_apache",
+        "data": 0
+      },
+      "r": {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      },
+      "b": {
+        "item": "hc:wheel",
+        "data": 0
+      },
+      "s": {
+        "item": "hc:seat",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:apache_spawn_egg",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

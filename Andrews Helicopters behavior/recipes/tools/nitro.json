@@ -1,0 +1,34 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:nitro" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "dld",
+      "lrl",
+      "dld"
+    ],
+    "key": {
+      "r": {
+        "item": "minecraft:redstone_block",
+        "data": 0
+      },
+      "d": {
+        "item": "minecraft:gunpowder",
+        "data": 0
+      },
+      "l": {
+        "item": "hc:sheet",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:nitro",
+      "count": 2,
+      "data": 0
+    }
+  }
+}
