@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:fuselaje_chinook",
+			"category": "Items"
+		},
+	"components": {
+	"minecraft:icon": "fuselaje_chinook",
+	"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:desert_camouflaje",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "desert_camouflaje",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

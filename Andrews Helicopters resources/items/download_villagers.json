@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:download_villagers",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "download_villagers",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

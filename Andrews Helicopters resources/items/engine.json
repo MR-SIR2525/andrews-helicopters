@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:engine",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "engine",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

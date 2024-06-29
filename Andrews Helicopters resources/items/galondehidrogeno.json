@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "hc:galondehidrogeno",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "galondehidrogeno",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

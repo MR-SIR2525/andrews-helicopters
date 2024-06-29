@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "hc:armored_sheet",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "armored_sheet",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

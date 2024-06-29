@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:seat",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "seat",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

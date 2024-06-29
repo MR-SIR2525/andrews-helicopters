@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:marin_camouflaje",
+			"category": "Items"
+		},
+	"components": {
+	"minecraft:icon": "marin_camouflaje",
+	"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

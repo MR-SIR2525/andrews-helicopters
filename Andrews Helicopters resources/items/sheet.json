@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:sheet",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "sheet",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

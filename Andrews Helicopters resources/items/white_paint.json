@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:white_paint",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "white_paint",
+			"minecraft:use_animation": "drink",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

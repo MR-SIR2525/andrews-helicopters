@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:yellow_paint",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "yellow_paint",
+			"minecraft:use_animation": "drink",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

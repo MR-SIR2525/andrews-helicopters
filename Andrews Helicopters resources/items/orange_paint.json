@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:orange_paint",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "orange_paint",
+			"minecraft:use_animation": "drink",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}

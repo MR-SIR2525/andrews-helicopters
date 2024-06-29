@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:lime_paint",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "lime_paint",
+			"minecraft:use_animation": "drink",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}
