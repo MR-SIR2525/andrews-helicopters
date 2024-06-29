@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.fly_apache.static": {
+      "animation_length": 0.2,
+      "loop": true,
+      "timeline": {
+        "0.0": [
+          "/execute @p[rx=10,rxm=-10] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 1 1 true",
+          "/execute @p[rx=14,rxm=-14] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 1 1 true"
+        ],
+        "0.1495": [
+          "/execute @p[rx=14,rxm=-14] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 0 0 true"
+        ],
+        "0.2": [
+          "/execute @p[rx=10,rxm=-10] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 0 0 true"
+        ]
+      }
+    }
+  }
+}

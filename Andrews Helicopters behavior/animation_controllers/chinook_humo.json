@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.chinook_humo": {
+      "states": {
+        "state1": {
+          "transitions": [
+            {
+              "humo": "!q.health <= 20"
+            }
+          ],
+          "on_entry": [
+            "/function humo_chinook",
+            "/tag @s add humo"
+          ]
+        },
+        "humo": {
+          "transitions": [
+            {
+              "state1": "q.health <= 20"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add humo",
+            "/function humo_chinook"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.chinook_falling": {
+      "states": {
+        "state1": {
+          "transitions": [
+            {
+              "falling": "!query.health <= 6"
+            }
+          ],
+          "on_entry": [
+            "/function falling_chinook",
+            "/tag @s add falling"
+          ]
+        },
+        "falling": {
+          "transitions": [
+            {
+              "state1": "query.health <= 6"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add falling",
+            "/function falling_chinook"
+          ]
+        }
+      }
+    }
+  }
+}

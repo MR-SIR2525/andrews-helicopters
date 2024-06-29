@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.apache_fly": {
+      "states": {
+        "ground": {
+          "blend_transition": 1.0,
+          "transitions": [
+            {
+              "flying": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function apache"
+          ]
+        },
+        "flying": {
+          "blend_transition": 1.0,
+          "transitions": [
+            {
+              "ground": "q.skin_id == 2 && q.mark_variant > 0"
+            }
+          ],
+          "on_entry": [
+            "/function apache"
+          ]
+        }
+      }
+    },
+    "controller.animation.apache_sound": {
+      "states": {
+        "ground": {
+          "blend_transition": 1.0,
+          "transitions": [
+            {
+              "flying": "(1.0)"
+            }
+          ]
+        },
+        "flying": {
+          "blend_transition": 1.0,
+          "transitions": [
+            {
+              "ground": "q.skin_id == 2 && q.mark_variant > 0"
+            }
+          ],
+          "on_entry": [
+            "/execute @e[type=hc:apache] ~~~ playsound apache.apache_blade @a[r=100] ~~~ 5.0 1.0 0.0"
+          ]
+        }
+      }
+    }
+  }
+}

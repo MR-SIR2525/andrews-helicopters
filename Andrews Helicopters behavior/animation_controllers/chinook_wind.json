@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.chinook_wind": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "wind": "q.is_on_ground && q.skin_id == 2"
+            }
+          ]
+        },
+        "wind": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function chinook_ground"
+          ]
+        }
+      }
+    }
+  }
+}

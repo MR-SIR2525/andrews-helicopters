@@ -1,0 +1,71 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.chinook_fly": {
+      "states": {
+        "ground": {
+          "transitions": [
+            {
+              "flying": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function chinook"
+          ]
+        },
+        "flying": {
+          "transitions": [
+            {
+              "ground": "q.skin_id == 2 && q.mark_variant > 0"
+            }
+          ],
+          "on_entry": [
+            "/function chinook"
+          ]
+        }
+      }
+    },
+    "controller.animation.chinook_sound": {
+      "states": {
+        "ground": {
+          "transitions": [
+            {
+              "flying": "(1.0)"
+            }
+          ]
+        },
+        "flying": {
+          "transitions": [
+            {
+              "ground": "q.skin_id == 2 && q.mark_variant > 0"
+            }
+          ],
+          "on_entry": [
+            "/execute @e[type=hc:chinook] ~~~ playsound chinook.chinook_blade @a[tag=!pilot,r=100] ~~~ 5.0 1.0 0.0"
+          ]
+        }
+      }
+    },
+    "controller.animation.chinook_sound_inside": {
+      "states": {
+        "ground": {
+          "transitions": [
+            {
+              "flying": "(1.0)"
+            }
+          ]
+        },
+        "flying": {
+          "transitions": [
+            {
+              "ground": "q.skin_id == 2 && q.mark_variant > 0"
+            }
+          ],
+          "on_entry": [
+            "/execute @e[type=hc:chinook] ~~~ playsound chinook.chinook_blade_inside @a[tag=pilot,r=10] ~~~ 5.0 1.0 0.0"
+          ]
+        }
+      }
+    }
+  }
+}
