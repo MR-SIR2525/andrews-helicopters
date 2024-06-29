@@ -1,0 +1,84 @@
+
+item.hc:white_paint.name=Pintura §fBlanca§r
+item.hc:black_paint.name=Pintura §0Negra§r
+item.hc:blue_paint.name=Pintura §1Azul§r
+item.hc:orange_paint.name=Pintura §6Naranja§r
+item.hc:lime_paint.name=Pintura §aLima§r
+item.hc:yellow_paint.name=Pintura §eAmarilla§r
+item.hc:gray_paint.name=Pintura Gris
+item.hc:purple_paint.name=Pintura §5Púrpura§r
+item.hc:red_paint.name=Pintura §4Roja§r
+
+item.hc:fuselaje_h130.name=Fuselaje AirbusH130
+item.hc:fuselaje_sikorsky.name=Fuselaje Sikorsky
+item.hc:fuselaje_apache.name=Fuselaje Apache
+item.hc:fuselaje_fachero.name=Fuselaje Fachero
+item.hc:fuselaje_littlebird.name=Fuselaje Littlebird
+item.hc:fuselaje_chinook.name=Fuselaje Chinook
+item.hc:fuselaje_bell47.name=Fuselaje Bell47
+item.hc:fuselaje_osprey.name=Fuselaje Osprey
+item.hc:fuselaje_samson.name=Fuselaje Samson
+item.hc:fuselaje_scorpion.name=Fuselaje Scorpion
+item.hc:fuselaje_mi35.name=Fuselaje Mi35
+
+item.hc:engine.name=Motór
+item.hc:osprey_engine.name=Motór de Osprey
+item.hc:main_propeller.name=Hélice principal
+item.hc:rear_propeller.name=Rotor trasero
+item.hc:barras_inferiores.name=Baras inferiores
+item.hc:key.name=Llave
+item.hc:key_apache.name=Llave apache
+item.hc:seat.name=Silla
+item.hc:nitro.name=Nitro
+item.hc:repair_kit.name=Kit de reparación
+item.hc:sheet.name=Lámina
+item.hc:armored_sheet.name=Lámina blindada
+item.hc:obsidian_sheet.name=Lámina de obsidiana
+item.hc:wheel.name=Llanta
+item.hc:desert_camouflaje.name=Camuflaje de desierto
+item.hc:forest_camouflaje.name=Camuflaje de bosque
+item.hc:marin_camouflaje.name=Camuflaje de la marina
+item.hc:download_villagers.name=Descargar aldeanos
+item.hc:load_villagers.name=Cargar aldeanos
+item.hc:galondehidrogeno.name=§bGalón de Hidrógeno
+item.hc:galondehidrogeno_empty.name=§bGalón de Hidrógeno §4Vacío
+item.hc:barra_de_hierro.name=Barra de hierro
+
+
+tile.hc:hydrogen_tank.name=Tanque de hidrógeno
+
+
+entity.hc:apache.name=Helicóptero Apache
+entity.hc:h130.name=Helicóptero AirbusH130
+entity.hc:cargo_helicopter.name=Helicóptero Sikorsky
+entity.hc:chinook.name=Helicóptero Chinook
+entity.hc:osprey.name=Helicóptero v22 Osprey
+entity.hc:machine_gun.name=metralleta
+entity.hc:fachero.name=Helicóptero Fachero
+entity.hc:bell47.name=Helicóptero Bell47
+entity.hc:samson.name=Helicóptero Samson
+entity.hc:scorpion.name=Helicóptero Scorpion
+entity.hc:mi35.name=Helicóptero Mi35
+entity.hc:littlebird.name=Helicóptero Littlebird
+
+
+item.spawn_egg.entity.hc:apache.name=Helicóptero Apache
+item.spawn_egg.entity.hc:h130.name=Helicóptero AirbusH130
+item.spawn_egg.entity.hc:sikorsky.name=Helicóptero Sikorsky
+item.spawn_egg.entity.hc:chinook.name=Helicóptero chinook
+item.spawn_egg.entity.hc:osprey.name=Helicóptero v22 Osprey
+item.spawn_egg.entity.hc:bell47.name=Helicóptero Bell47
+item.spawn_egg.entity.hc:littlebird.name=Helicóptero Littlebird
+item.spawn_egg.entity.hc:fachero.name=Helicóptero Fachero
+item.spawn_egg.entity.hc:samson.name=Helicóptero Samson
+item.spawn_egg.entity.hc:scorpion.name=Helicóptero Scorpion
+item.spawn_egg.entity.hc:mi35.name=Helicóptero Mi35
+
+
+action.interact.pintar=Pintar
+action.interact.cargar=Cargar
+action.interact.descargar=Descargar
+action.interact.fly=Volar
+action.interact.§aStart_engines=§aEncender motores
+action.interact.§eTurn_off_engines=§eApagar motores
+
