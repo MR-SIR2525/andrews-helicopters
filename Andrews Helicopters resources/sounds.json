@@ -1,0 +1,151 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "hc:apache": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "apache.blade"
+          }
+        }
+      },
+      "hc:h130": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "h130.blade"
+          }
+        }
+      },
+      "hc:bell47": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "bell47.blade"
+          }
+        }
+      },
+      "hc:Chinook": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "Chinook.blade"
+          }
+        }
+      },
+      "hc:littlebird": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "littlebird.blade"
+          }
+        }
+      },
+      "hc:fachero": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "fachero.blade"
+          }
+        }
+      },
+      "hc:chinook": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente"
+        }
+      },
+      "hc:sikorsky": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "sikorsky.blade"
+          }
+        }
+      },
+      "hc:samson": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "samson.blade"
+          }
+        }
+      },
+      "hc:scorpion": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente",
+          "step": {
+            "air": "scorpion.blade"
+          }
+        }
+      },
+      "hc:osprey": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente"
+        }
+      },
+      "hc:mi35": {
+        "volume": 1.5,
+        "pitch": 1,
+        "events": {
+          "hurt": "extra.hurt_helicopter",
+          "death": "próximamente",
+          "eat": "próximamente"
+        }
+      },
+      "hc:machine_gun": {
+        "volume": 0.4,
+        "pitch": 1,
+        "events": {
+          "shoot": {
+            "sound": "gun.shoot",
+            "volume": 0.4
+          }
+        }
+      }
+    }
+  }
+}
