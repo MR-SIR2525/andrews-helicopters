@@ -1,0 +1,72 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.apache": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.default",
+            "Texture.desert",
+            "Texture.forest",
+            "Texture.marin"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "textures": [
+        "Array.skins[query.variant]"
+      ],
+      "materials": [
+        {
+          "*": "Material.default",
+          "door_pilot": "Material.transparent",
+          "redon": "Material.transparent",
+          "greenon": "Material.transparent",
+          "whiteon": "Material.transparent",
+          "mainwhite2on": "Material.transparent"
+        }
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    },
+    "controller.render.apache.misiles1": {
+      "geometry": "Geometry.misiles1",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.misiles1"
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    },
+    "controller.render.apache.misiles2": {
+      "geometry": "Geometry.misiles2",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.misiles2"
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    },
+    "controller.render.apache_h_meter": {
+      "geometry": "Geometry.apache_h_meter",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "query.mark_variant <= 4 ? Texture.hydrogen_low : (query.mark_variant > 4 && query.mark_variant <= 8 ? Texture.hydrogen_medium : Texture.hydrogen_full)"
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

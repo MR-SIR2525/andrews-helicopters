@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.apache_helicopter": {
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.desert",
+						"Texture.forest",
+						"Texture.marin"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"is_hurt_color": {},
+            "on_fire_color": {}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+   "format_version": "1.8.0",
+   "render_controllers": {
+      "controller.render.machine_gun": {
+         "textures": [
+            "Texture.default"
+         ],
+         "arrays": {
+            "materials": {
+               "Array.materials": [
+                  "Material.default"
+               ]
+            }
+         },
+         "geometry": "Geometry.default",
+         "materials": [
+            {
+               "*": "Material.default"
+            }
+         ],
+         "is_hurt_color": {},
+         "on_fire_color": {}
+      }
+   }
+}
