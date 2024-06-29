@@ -1,0 +1,1 @@
+execute @e[type=hc:apache,r=1,c=1] ~~~ particle hc:polvo ~~1~

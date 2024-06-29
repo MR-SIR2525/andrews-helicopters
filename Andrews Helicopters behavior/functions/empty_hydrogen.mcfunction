@@ -1,0 +1,1 @@
+tellraw @p {"rawtext":[{"text":"<§bCOMPUTADORA§f> §l§6El nivel de combustible hydrogeno es bajo o nulo,   por favor llenar el tanque con un §bgalón de hydrogeno"}]}
