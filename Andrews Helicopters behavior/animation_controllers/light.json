@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.light": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "light": "query.day"
+            },
+            {
+              "no_light": "!query.day"
+            }
+          ]
+        },
+        "light": {
+          "transitions": [
+            {
+              "default": "query.day"
+            }
+          ],
+          "on_entry": [
+            "/setblock ~ ~ ~ light_block 12 keep",
+            "/fill ~4 ~1 ~4 ~-4 ~4 ~-4 air 0 replace light_block 12",
+            "/fill ~4 ~-1 ~4 ~-4 ~-2 ~-4 air 0 replace light_block 12",
+            "/fill ~4 ~ ~4 ~1 ~ ~1 air 0 replace light_block 12",
+            "/fill ~-4 ~ ~-4 ~-1 ~ ~-1 air 0 replace light_block 12",
+            "/fill ~4 ~ ~-4 ~1 ~ ~-1 air 0 replace light_block 12",
+            "/fill ~-4 ~ ~4 ~-1 ~ ~1 air 0 replace light_block 12",
+            "/fill ~-4 ~ ~ ~-1 ~ ~ air 0 replace light_block 12",
+            "/fill ~4 ~ ~ ~1 ~ ~ air 0 replace light_block 12",
+            "/fill ~ ~ ~-4 ~ ~ ~-1 air 0 replace light_block 12",
+            "/fill ~ ~ ~4 ~ ~ ~1 air 0 replace light_block 12"
+          ]
+        },
+        "no_light": {
+          "transitions": [
+            {
+              "default": "query.day"
+            }
+          ],
+          "on_entry": [
+            "/fill ~4 ~4 ~4 ~-4 ~-2 ~-4 air 0 replace light_block 12"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.pilot": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "driving": "q.has_rider"
+            }
+          ]
+        },
+        "driving": {
+          "transitions": [
+            {
+              "default": "!q.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/tag @p add pilot"
+          ],
+          "on_exit": [
+            "/tag @p remove pilot"
+          ]
+        }
+      }
+    }
+  }
+}

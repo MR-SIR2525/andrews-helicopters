@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.doors": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "rider": "query.has_rider"
+            }
+          ]
+        },
+        "rider": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "@s hc:close_doors",
+            "/playanimation @a[r=1] animation.helicopter.close"
+          ]
+        }
+      }
+    }
+  }
+}

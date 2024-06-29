@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.empty_hydrogen": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "empty_hydrogen": "q.has_rider && q.mark_variant < 3"
+            }
+          ]
+        },
+        "empty_hydrogen": {
+          "transitions": [
+            {
+              "default": "!q.has_rider && q.mark_variant > 3"
+            }
+          ],
+          "on_entry": [
+            "/function empty_hydrogen"
+          ]
+        }
+      }
+    }
+  }
+}
