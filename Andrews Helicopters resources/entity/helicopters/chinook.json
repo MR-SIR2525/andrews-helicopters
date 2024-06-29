@@ -1,0 +1,98 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hc:chinook",
+      "materials": {
+        "default": "ender_dragon",
+        "flashes": "entity_beam_additive"
+      },
+      "textures": {
+        "gray": "textures/entity/chinook/chinook_gray",
+        "white": "textures/entity/chinook/chinook_white",
+        "yellow": "textures/entity/chinook/chinook_yellow",
+        "lime": "textures/entity/chinook/chinook_lime",
+        "red": "textures/entity/chinook/chinook_red",
+        "orange": "textures/entity/chinook/chinook_orange",
+        "blue": "textures/entity/chinook/chinook_blue",
+        "purple": "textures/entity/chinook/chinook_purple",
+        "black": "textures/entity/chinook/chinook_black",
+        "hydrogen_full": "textures/hydrogenmeter/hydrogen_full",
+        "hydrogen_medium": "textures/hydrogenmeter/hydrogen_medium",
+        "hydrogen_low": "textures/hydrogenmeter/hydrogen_low"
+      },
+      "geometry": {
+        "default": "geometry.ch47_chinook",
+        "ch47_chinook_h_meter": "geometry.ch47_chinook_h_meter"
+      },
+      "render_controllers": [
+        "controller.render.ch47_chinook",
+        "controller.render.ch47_chinook_h_meter"
+      ],
+      "spawn_egg": {
+        "texture": "chinook_egg"
+      },
+      "animations": {
+        "stop": "animation.chinook.stop",
+        "stop_default": "animation.chinook.stop",
+        "turn": "animation.chinook.turn",
+        "move": "animation.chinook.move",
+        "falling": "animation.chinook.falling",
+        "falling_in_ground": "animation.chinook.falling_in_ground",
+        "landing": "animation.chinook.landing",
+        "starting": "animation.chinook.starting",
+        "low_fuel": "animation.chinook.low_fuel",
+        "lever": "animation.chinook.lever",
+        "parabrisas": "animation.chinook.parabrisas",
+        "h_meter": "animation.chinook.h_meter"
+      },
+      "sound_effects": {
+        "alarm1": "extra.alarm1",
+        "alarm2": "extra.alarm2",
+        "starting_chinook": "chinook.starting_chinook",
+        "turning_off_chinook": "chinook.turning_off_chinook"
+      },
+      "particle_effects": {
+        "polvo": "hc:polvo",
+        "fuego": "hc:fuego",
+        "humo": "hc:humo"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "stop": "query.skin_id == 0"
+          },
+          {
+            "starting": "query.skin_id == 1 && q.mark_variant >= 1 && query.is_on_ground"
+          },
+          {
+            "landing": "query.skin_id == 3 && q.mark_variant >= 1 && query.is_on_ground"
+          },
+          {
+            "stop_default": "query.skin_id == 4"
+          },
+          {
+            "parabrisas": "query.is_in_water_or_rain && query.has_rider"
+          },
+          {
+            "move": "query.modified_move_speed && !query.is_on_ground && q.mark_variant >= 1"
+          },
+          {
+            "turn": "query.skin_id == 2 && q.mark_variant >= 1"
+          },
+          {
+            "falling": "query.health <= 6 && !query.is_on_ground"
+          },
+          {
+            "falling_in_ground": "query.health <= 6 && query.is_on_ground"
+          },
+          {
+            "low_fuel": "query.mark_variant <= 4 && q.skin_id == 2"
+          },
+          "lever",
+          "h_meter"
+        ]
+      }
+    }
+  }
+}

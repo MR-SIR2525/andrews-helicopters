@@ -1,0 +1,92 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hc:apache",
+      "materials": {
+        "default": "spider",
+        "transparent": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/apache/default",
+        "desert": "textures/entity/apache/desert",
+        "forest": "textures/entity/apache/forest",
+        "marin": "textures/entity/apache/marin",
+        "hydrogen_full": "textures/hydrogenmeter/hydrogen_full",
+        "hydrogen_medium": "textures/hydrogenmeter/hydrogen_medium",
+        "hydrogen_low": "textures/hydrogenmeter/hydrogen_low",
+        "misiles1": "textures/armas/misiles1",
+        "misiles2": "textures/armas/misiles2"
+      },
+      "geometry": {
+        "default": "geometry.apache",
+        "apache_h_meter": "geometry.apache_h_meter",
+        "misiles1": "geometry.apache.misiles1",
+        "misiles2": "geometry.apache.misiles2"
+      },
+      "render_controllers": [
+        "controller.render.apache",
+        "controller.render.apache_h_meter",
+        "controller.render.apache.misiles1",
+        "controller.render.apache.misiles2"
+      ],
+      "spawn_egg": {
+        "texture": "apache_egg"
+      },
+      "animations": {
+        "attacking": "animation.apache.attacking",
+        "turn": "animation.apache.turn",
+        "move": "animation.apache.move",
+        "falling": "animation.apache.falling",
+        "falling_in_ground": "animation.apache.falling_in_ground",
+        "stop": "animation.apache.stop",
+        "landing": "animation.apache.landing",
+        "starting": "animation.apache.starting",
+        "lever": "animation.apache.lever",
+        "low_fuel": "animation.apache.low_fuel",
+        "h_meter": "animation.apache.h_meter"
+      },
+      "sound_effects": {
+        "alarm1": "extra.alarm1",
+        "alarm2": "extra.alarm2",
+        "starting_apache": "apache.starting_apache",
+        "turning_off_apache": "apache.turning_off_apache"
+      },
+      "particle_effects": {
+        "polvo": "hc:polvo",
+        "fuego": "hc:fuego",
+        "humo": "hc:humo"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "stop": "query.skin_id == 0 && query.is_on_ground"
+          },
+          {
+            "starting": "query.skin_id == 1 && q.mark_variant >= 1 && query.is_on_ground"
+          },
+          {
+            "landing": "query.skin_id == 3 && q.mark_variant >= 1 && query.is_on_ground"
+          },
+          {
+            "turn": "query.skin_id == 2 && q.mark_variant >= 1 && query.is_on_ground"
+          },
+          {
+            "move": "query.modified_move_speed && !query.is_on_ground && q.mark_variant >= 1"
+          },
+          {
+            "falling": "query.health <= 6 && !query.is_on_ground"
+          },
+          {
+            "falling_in_ground": "query.health <= 6 && query.is_on_ground"
+          },
+          {
+            "low_fuel": "query.mark_variant <= 4 && q.skin_id == 2"
+          },
+          "lever",
+          "h_meter"
+        ]
+      }
+    }
+  }
+}

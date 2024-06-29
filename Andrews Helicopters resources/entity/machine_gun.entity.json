@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hc:machine_gun",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/machine_gun"
+      },
+      "geometry": {
+        "default": "geometry.machine_gun"
+      },
+      "render_controllers": [
+        "controller.render.machine_gun"
+      ],
+      "particle_effects": {
+        "shoot_flash": "hc:shoot_flash"
+      },
+      "animations": {
+        "attack": "animation.machine_gun.attack",
+        "look_at_target": "animation.machine_gun.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "attack": "q.has_target && q.skin_id == 0"
+          },
+          "look_at_target"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hc:misil1",
+      "render_controllers": [
+        "controller.render.misil1"
+      ],
+      "animations": {
+        "move": "animation.misil1.move"
+      },
+      "textures": {
+        "default": "textures/armas/misiles1"
+      },
+      "geometry": {
+        "default": "geometry.apache_misil1"
+      },
+      "materials": {
+        "default": "arrow"
+      },
+      "spawn_egg": {
+        "texture": "null",
+        "texture_index": 0
+      },
+      "scripts": {
+        "animate": [
+          "move"
+        ]
+      }
+    }
+  }
+}
