@@ -1,0 +1,266 @@
+{
+   "resource_pack_name": "vanilla",
+   "texture_data": {
+      "mi35_egg": {
+         "textures": [
+            "textures/items/mi35_egg"
+         ]
+      },
+      "littlebird_egg": {
+         "textures": [
+            "textures/items/littlebird_egg"
+         ]
+      },
+      "bell47_egg": {
+         "textures": [
+            "textures/items/bell47_egg"
+         ]
+      },
+      "fachero_egg": {
+         "textures": [
+            "textures/items/fachero_egg"
+         ]
+      },
+      "h130_egg": {
+         "textures": [
+            "textures/items/h130_egg"
+         ]
+      },
+      "sikorsky_egg": {
+         "textures": [
+            "textures/items/sikorsky_egg"
+         ]
+      },
+      "apache_egg": {
+         "textures": [
+            "textures/items/apache_egg"
+         ]
+      },
+      "chinook_egg": {
+         "textures": [
+            "textures/items/chinook_egg"
+         ]
+      },
+      "samson_egg": {
+         "textures": [
+            "textures/items/samson_egg"
+         ]
+      },
+      "scorpion_egg": {
+         "textures": [
+            "textures/items/scorpion_egg"
+         ]
+      },
+      "osprey_egg": {
+         "textures": [
+            "textures/items/osprey_egg"
+         ]
+      },
+      "machine_gun": {
+         "textures": [
+            "textures/items/machine_gun"
+         ]
+      },
+      "barras_inferiores": {
+         "textures": [
+            "textures/items/barras_inferiores"
+         ]
+      },
+      "barra_de_hierro":{
+        "textures": [
+            "textures/items/barra_de_hierro"
+          ]
+      },
+      "key": {
+         "textures": [
+            "textures/items/key"
+         ]
+      },
+      "download_villagers": {
+         "textures": [
+            "textures/items/download_villagers"
+         ]
+      },
+      "load_villagers": {
+         "textures": [
+            "textures/items/load_villagers"
+         ]
+      },
+      "fuselaje_h130": {
+         "textures": [
+            "textures/items/fuselaje_h130"
+         ]
+      },
+      "fuselaje_sikorsky": {
+         "textures": [
+            "textures/items/fuselaje_sikorsky"
+         ]
+      },
+      "fuselaje_apache": {
+         "textures": [
+            "textures/items/fuselaje_apache"
+         ]
+      },
+      "fuselaje_chinook": {
+         "textures": [
+            "textures/items/fuselaje_chinook"
+         ]
+      },
+      "fuselaje_osprey": {
+          "textures": [
+           "textures/items/fuselaje_osprey"   
+         ]
+      },
+      "fuselaje_fachero": {
+         "textures": [
+            "textures/items/fuselaje_fachero"
+         ]
+      },
+      "fuselaje_bell47": {
+         "textures": [
+            "textures/items/fuselaje_bell47"
+         ]
+      },
+      "fuselaje_littlebird": {
+         "textures": [
+            "textures/items/fuselaje_littlebird"
+         ]
+      },
+      "fuselaje_samson": {
+         "textures": [
+            "textures/items/fuselaje_samson"
+         ]
+      },
+      "fuselaje_scorpion": {
+         "textures": [
+            "textures/items/fuselaje_scorpion"
+         ]
+      },
+      "fuselaje_mi35": {
+         "textures": [
+            "textures/items/fuselaje_mi35"
+         ]
+      },
+      "main_propeller": {
+         "textures": [
+            "textures/items/main_propeller"
+         ]
+      },
+      "sheet": {
+         "textures": [
+            "textures/items/sheet"
+         ]
+      },
+      "armored_sheet": {
+         "textures": [
+            "textures/items/armored_sheet"
+         ]
+      },
+      "obsidian_sheet": {
+         "textures": [
+            "textures/items/obsidian_sheet"
+         ]
+      },
+      "engine": {
+         "textures": [
+            "textures/items/engine"
+         ]
+      },
+      "osprey_engine": {
+          "textures": [
+              "textures/items/osprey_engine"
+         ]
+      },
+      "wheel": {
+         "textures": [
+            "textures/items/wheel"
+         ]
+      },
+      "desert_camouflaje": {
+         "textures": [
+            "textures/items/desert_camouflaje"
+         ]
+      },
+      "forest_camouflaje": {
+         "textures": [
+            "textures/items/forest_camouflaje"
+         ]
+      },
+      "marin_camouflaje": {
+         "textures": [
+            "textures/items/marin_camouflaje"
+         ]
+      },
+      "rear_propeller": {
+         "textures": [
+            "textures/items/rear_propeller"
+         ]
+      },
+      "seat": {
+         "textures": [
+            "textures/items/seat"
+         ]
+      },
+      "repair_kit": {
+         "textures": [
+            "textures/items/repair_kit"
+         ]
+      },
+      "orange_paint": {
+         "textures": [
+            "textures/items/orange_paint"
+         ]
+      },
+      "red_paint": {
+         "textures": [
+            "textures/items/red_paint"
+         ]
+      },
+      "yellow_paint": {
+         "textures": [
+            "textures/items/yellow_paint"
+         ]
+      },
+      "lime_paint": {
+         "textures": [
+            "textures/items/lime_paint"
+         ]
+      },
+      "purple_paint": {
+         "textures": [
+            "textures/items/purple_paint"
+         ]
+      },
+      "gray_paint": {
+         "textures": [
+            "textures/items/gray_paint"
+         ]
+      },
+      "blue_paint": {
+         "textures": [
+            "textures/items/blue_paint"
+         ]
+      },
+      "black_paint": {
+         "textures": [
+            "textures/items/black_paint"
+         ]
+      },
+      "white_paint": {
+         "textures": [
+            "textures/items/white_paint"
+         ]
+      },
+    "galondehidrogeno_empty": {
+    "textures": "textures/items3d/galondehidrogeno_empty"
+    },
+    "galondehidrogeno": {
+      "textures": "textures/items3d/galondehidrogeno"
+    },
+    "nitro": {
+         "textures": [
+            "textures/items/nitro"
+         ]
+      }
+   }
+}

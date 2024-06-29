@@ -1,0 +1,73 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "hydrogen_tank0": {
+      "textures": [
+        "textures/blocks/hydrogen_tank0"
+      ]
+    },
+    "hydrogen_tank1": {
+      "textures": [
+        "textures/blocks/hydrogen_tank1"
+      ]
+    },
+    "hydrogen_tank2": {
+      "textures": [
+        "textures/blocks/hydrogen_tank2"
+      ]
+    },
+    "hydrogen_tank3": {
+      "textures": [
+        "textures/blocks/hydrogen_tank3"
+      ]
+    },
+    "hydrogen_tank4": {
+      "textures": [
+        "textures/blocks/hydrogen_tank4"
+      ]
+    },
+    "hydrogen_tank5": {
+      "textures": [
+        "textures/blocks/hydrogen_tank5"
+      ]
+    },
+    "hydrogen_tank6": {
+      "textures": [
+        "textures/blocks/hydrogen_tank6"
+      ]
+    },
+    "hydrogen_tank7": {
+      "textures": [
+        "textures/blocks/hydrogen_tank7"
+      ]
+    },
+    "hydrogen_tank8": {
+      "textures": [
+        "textures/blocks/hydrogen_tank8"
+      ]
+    },
+    "hydrogen_tank9": {
+      "textures": [
+        "textures/blocks/hydrogen_tank9"
+      ]
+    },
+    "hydrogen_tank10": {
+      "textures": [
+        "textures/blocks/hydrogen_tank10"
+      ]
+    },
+    "hydrogen_tank11": {
+      "textures": [
+        "textures/blocks/hydrogen_tank11"
+      ]
+    },
+    "hydrogen_tank12": {
+      "textures": [
+        "textures/blocks/hydrogen_tank12"
+      ]
+    }
+  }
+}
