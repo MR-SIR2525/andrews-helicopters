@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:desert_camouflaje" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " a ",
+      " m ",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "hc:sheet",
+        "data": 0
+      },
+      "m": {
+        "item": "hc:yellow_paint",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:desert_camouflaje",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

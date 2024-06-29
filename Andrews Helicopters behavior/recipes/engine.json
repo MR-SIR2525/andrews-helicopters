@@ -1,0 +1,38 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:engine" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "dld",
+      "lrl",
+      "iii"
+    ],
+    "key": {
+      "r": {
+        "item": "minecraft:redstone_block",
+        "data": 0
+      },
+      "d": {
+        "item": "minecraft:diamond",
+        "data": 0
+      },
+      "i": {
+        "item": "minecraft:iron_block",
+        "data": 0
+      },
+      "l": {
+        "item": "hc:sheet",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:engine",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

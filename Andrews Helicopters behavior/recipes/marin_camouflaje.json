@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:marin_camouflaje" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " a ",
+      " m ",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "hc:sheet",
+        "data": 0
+      },
+      "m": {
+        "item": "hc:blue_paint",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:marin_camouflaje",
+      "count": 4,
+      "data": 0
+    }
+  }
+}
