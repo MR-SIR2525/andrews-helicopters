@@ -1,0 +1,119 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.h_meter",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 26,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 3, 0]
+			},
+			"bones": [
+				{
+					"name": "todo",
+					"pivot": [0, 21, 0]
+				},
+				{
+					"name": "hydrogen_meter",
+					"parent": "todo",
+					"pivot": [-1.37637, 30.77913, -88.01031],
+					"cubes": [
+						{
+							"origin": [-0.37637, 27.96725, -91.77976],
+							"size": [0.25, 1.3, 6.20323],
+							"pivot": [2.5, 28.43699, -84.25412],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [2, 6]},
+								"east": {"uv": [4, 0], "uv_size": [2, 6]},
+								"south": {"uv": [4, 0], "uv_size": [2, 6]},
+								"west": {"uv": [4, 0], "uv_size": [2, 6]},
+								"up": {"uv": [4, 0], "uv_size": [2, 6]},
+								"down": {"uv": [4, 6], "uv_size": [2, -6]}
+							}
+						},
+						{
+							"origin": [-2.62637, 27.96725, -91.77976],
+							"size": [0.25, 1.3, 6.20323],
+							"pivot": [2.5, 28.43699, -84.25412],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [2, 6]},
+								"east": {"uv": [4, 0], "uv_size": [2, 6]},
+								"south": {"uv": [4, 0], "uv_size": [2, 6]},
+								"west": {"uv": [4, 0], "uv_size": [2, 6]},
+								"up": {"uv": [4, 0], "uv_size": [2, 6]},
+								"down": {"uv": [4, 6], "uv_size": [2, -6]}
+							}
+						},
+						{
+							"origin": [-2.62637, 28.36563, -85.46978],
+							"size": [2.5, 1.3, 0.20323],
+							"pivot": [2.5, 28.83537, -84.94414],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [2, 6]},
+								"east": {"uv": [4, 0], "uv_size": [2, 6]},
+								"south": {"uv": [4, 0], "uv_size": [2, 6]},
+								"west": {"uv": [4, 0], "uv_size": [2, 6]},
+								"up": {"uv": [4, 0], "uv_size": [2, 6]},
+								"down": {"uv": [4, 6], "uv_size": [2, -6]}
+							}
+						},
+						{
+							"origin": [-2.37637, 28.34225, -91.67928],
+							"size": [2, 1.3, 0.20323],
+							"pivot": [2.5, 28.81199, -84.90364],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [2, 6]},
+								"east": {"uv": [4, 0], "uv_size": [2, 6]},
+								"south": {"uv": [4, 0], "uv_size": [2, 6]},
+								"west": {"uv": [4, 0], "uv_size": [2, 6]},
+								"up": {"uv": [4, 0], "uv_size": [2, 6]},
+								"down": {"uv": [4, 6], "uv_size": [2, -6]}
+							}
+						},
+						{
+							"origin": [-2.37637, 27.86563, -91.60376],
+							"size": [2, 1, 6],
+							"pivot": [2.5, 28.33537, -84.07812],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [2, 6]},
+								"east": {"uv": [0, 0], "uv_size": [2, 6]},
+								"south": {"uv": [0, 0], "uv_size": [2, 6]},
+								"west": {"uv": [0, 0], "uv_size": [2, 6]},
+								"up": {"uv": [0, 0], "uv_size": [2, 6]},
+								"down": {"uv": [0, 6], "uv_size": [2, -6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "display",
+					"parent": "hydrogen_meter",
+					"pivot": [-1.37637, 29.65413, -85.10281],
+					"cubes": [
+						{
+							"origin": [-2.37637, 29.43694, -91.03544],
+							"size": [2, 0.1, 6],
+							"pivot": [-1.37637, 29.68153, -84.86002],
+							"rotation": [-30, 0, 0],
+							"uv": {
+								"north": {"uv": [2, 0], "uv_size": [2, 6]},
+								"east": {"uv": [2, 0], "uv_size": [2, 6]},
+								"south": {"uv": [2, 0], "uv_size": [2, 6]},
+								"west": {"uv": [2, 0], "uv_size": [2, 6]},
+								"up": {"uv": [2, 0], "uv_size": [2, 6]},
+								"down": {"uv": [2, 6], "uv_size": [2, -6]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
