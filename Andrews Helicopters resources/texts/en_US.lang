@@ -28,8 +28,8 @@ item.hc:wheel.name=Tire
 item.hc:desert_camouflaje.name=Desert camouflage
 item.hc:forest_camouflaje.name=Forest camouflaje
 item.hc:marin_camouflaje.name=Navy camouflage
-item.hc:download_villagers.name=Lower villagers
-item.hc:load_villagers.name=Raise villagers
+item.hc:download_villagers.name=Unload villagers tool
+item.hc:load_villagers.name=Load nearby villagers tool
 
 entity.hc:apache_helicopter.name=Apache helicopter
 entity.hc:helicopter.name=Helicopter
