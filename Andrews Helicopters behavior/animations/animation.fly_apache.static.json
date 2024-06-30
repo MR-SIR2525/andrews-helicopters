@@ -6,14 +6,14 @@
       "loop": true,
       "timeline": {
         "0.0": [
-          "/execute @p[rx=10,rxm=-10] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 1 1 true",
-          "/execute @p[rx=14,rxm=-14] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 1 1 true"
+          "/execute as @p[rx=10,rxm=-10] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 1 1 true",
+          "/execute as @p[rx=14,rxm=-14] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 1 1 true"
         ],
-        "0.1495": [
-          "/execute @p[rx=14,rxm=-14] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 0 0 true"
+        "0.1497": [
+          "/execute as @p[rx=14,rxm=-14] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 0 0 true"
         ],
         "0.2": [
-          "/execute @p[rx=10,rxm=-10] ~~~ execute @e[type=hc:apache,r=6,c=1] ~~~ effect @s levitation 0 0 true"
+          "/execute as @p[rx=10,rxm=-10] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 0 0 true"
         ]
       }
     }
