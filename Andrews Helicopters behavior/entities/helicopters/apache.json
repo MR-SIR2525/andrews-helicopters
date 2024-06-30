@@ -137,12 +137,12 @@
           ]
         }
       },
-      "hc_gravitytrue": {
+      "gravity_true": {
         "minecraft:physics": {
           "has_gravity": true
         }
       },
-      "hc_gravityfalse": {
+      "gravity_false": {
         "minecraft:physics": {
           "has_gravity": false
         }
@@ -629,6 +629,18 @@
           ]
         }
       },
+
+      "gravity_on": {
+        "add": {
+          "component_groups": ["gravity_true"]
+        }
+      },
+      "gravity_off": {
+        "remove": {
+          "component_groups": ["gravity_false"]
+        }
+      },
+
       "hc:startup": {
         "sequence": [
           {
