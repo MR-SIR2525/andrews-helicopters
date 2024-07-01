@@ -1,1 +1,1 @@
-execute @e[type=hc:chinook,r=1,c=1] ~~~ particle hc:polvo ~~1~
+execute as @e[type=hc:chinook,r=1,c=1] at @s run particle hc:polvo ~~1~
