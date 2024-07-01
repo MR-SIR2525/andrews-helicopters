@@ -5,20 +5,20 @@
         "description": "Resource pack. Helicopters extracted and improved from 'Survival Helicopters v1.5' by yimmplay.",
         "uuid": "313efae7-78b0-478e-bcde-1d153e8faf0a",
         "min_engine_version": [1, 20, 10],
-        "version": [1, 0, 111]
+        "version": [1, 0, 112]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "b03437a2-6744-4ed0-b5cc-c0eb9daa3e00",
-            "version": [1, 0, 111]
+            "version": [1, 0, 112]
         }
     ],
     "dependencies": [
         {
             //behavior pack
             "uuid": "6cd92afe-2b93-4e6d-8495-70390ea354d7",
-            "version": [1, 0, 111]
+            "version": [1, 0, 112]
         }
     ],
     "metadata": {
