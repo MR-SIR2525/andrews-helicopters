@@ -6,10 +6,10 @@
     },
     
     "tags": [ "crafting_table" ],
-    "pattern": [
-      "   ",
-      "lil",
-      "   "
+    "pattern": [  //fixed by MRxSIR (it was the same as main prop)
+      "  l",
+      " i ",
+      "l   "
     ],
     "key": {
       "i": {

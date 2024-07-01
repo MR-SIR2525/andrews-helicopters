@@ -1,18 +1,23 @@
 {
    "format_version": "1.12",
-   "minecraft:recipe_shapeless": {
+   "minecraft:recipe_shaped": {
       "description": {
          "identifier": "hc:load_villagers"
       },
-      "tags": [
-         "crafting_table"
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         " r ",
+         " p ",
+         " p "
       ],
-      "ingredients": [
-         {
-            "item": "minecraft:paper",
-            "data": 0
+      "key": {
+         "r": {
+            "item": "minecraft:redstone"
+         },
+         "p": {
+            "item": "minecraft:paper"
          }
-      ],
+      },
       "result": {
          "item": "hc:load_villagers",
          "count": 1
