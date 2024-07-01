@@ -141,7 +141,7 @@
       "total_exp_required": 70,
       "groups": [
         {
-          "num_to_select": 1,
+          "num_to_select": 2,
           "trades": [
             {
               "wants": [
@@ -164,6 +164,23 @@
             { // added by MRxSIR
               "wants": [
                 {
+                  "item": "minecraft:iron_axe",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:iron_nugget",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 18,
+              "reward_exp": true
+            },
+            { // added by MRxSIR
+              "wants": [
+                {
                   "item": "minecraft:emerald",
                   "quantity": 64,
                   "price_multiplier": 0.2
@@ -171,12 +188,76 @@
               ],
               "gives": [
                 {
-                  "item": "hc:apache_egg",
+                  "item": "hc:apache_spawn_egg",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 24,
               "max_uses": 3,
+              "reward_exp": true
+            },
+            { // added by MRxSIR
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.2
+                },
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 1,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "hc:chinook_spawn_egg",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 25,
+              "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // group added by MRxSIR
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "hc:engine",
+                  "quantity": 1,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3
+                }
+              ],
+              "trader_exp": 11,
+              "max_uses": 12,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:iron_nugget",
+                  "quantity": 29,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 11,
+              "max_uses": 12,
               "reward_exp": true
             }
           ]
@@ -278,6 +359,104 @@
               ],
               "trader_exp": 30,
               "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+
+    { // Tier 5 (added by MRxSIR)
+      "total_exp_required": 425,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 25,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:diamond_sword",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_sword",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 5,
+                        "max": 45
+                      }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 36,
+              "max_uses": 2,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_sword",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 36,
+              "max_uses": 2,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:iron_sword",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:iron_ingot",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 36,
+              "max_uses": 9,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:golden_sword",
+                  "quantity": 1
+                },
+                {
+                  "item": "minecraft:golden_sword",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
               "reward_exp": true
             }
           ]
