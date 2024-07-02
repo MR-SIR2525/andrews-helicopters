@@ -9,7 +9,7 @@
     "pattern": [  //fixed by MRxSIR (it was the same as main prop)
       "  l",
       " i ",
-      "l   "
+      "l  "
     ],
     "key": {
       "i": {
