@@ -141,7 +141,7 @@
       "total_exp_required": 70,
       "groups": [
         {
-          "num_to_select": 2,
+          "num_to_select": 3,
           "trades": [
             {
               "wants": [
@@ -217,6 +217,42 @@
               ],
               "trader_exp": 25,
               "max_uses": 3,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "hc:galondehidrogeno",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 12,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "hc:galondehidrogeno_empty",
+                  "quantity": 1,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "hc:galondehidrogeno",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 1,
+              "max_uses": 12,
               "reward_exp": true
             }
           ]
