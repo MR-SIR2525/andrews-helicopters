@@ -8,7 +8,7 @@
          "sounds": [
             {
                "name": "sounds/chinook/chinook_blade",
-               "volume": 0.1
+               "volume": 0.3
             }
          ]
       },
@@ -17,8 +17,12 @@
          "__use_legacy_max_distance": true,
          "category": "neutral",
          "sounds": [
+            // {
+            //    "name": "sounds/chinook/chinook_blade_inside",
+            //    "volume": 0.1
+            // }
             {
-               "name": "sounds/chinook/chinook_blade_inside",
+               "name": "sounds/chinook/chinook_blade",
                "volume": 0.1
             }
          ]
