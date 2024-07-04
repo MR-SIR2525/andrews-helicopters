@@ -173,7 +173,7 @@
             "activado"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "title @p actionbar Activando machine_gun"
           ]
@@ -190,7 +190,7 @@
             "desactivado"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "title @p actionbar desactivando machine_gun"
           ]
