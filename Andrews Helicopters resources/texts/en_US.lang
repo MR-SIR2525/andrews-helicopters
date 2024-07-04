@@ -42,7 +42,7 @@ entity.hc:osprey.name=V22 Osprey helicopter
 entity.hc:machine_gun.name=Machine gun
 
 item.spawn_egg.entity.hc:apache.name=Apache helicopter
-item.spawn_egg.entity.hc:apache.name=Apache helicopter
+item.spawn_egg.entity.hc:apache_helicopter.name=Apache helicopter
 item.spawn_egg.entity.hc:helicopter.name=Helicopter
 item.spawn_egg.entity.hc:cargo_helicopter.name=Sikorsky helicopter
 item.spawn_egg.entity.hc:chinook.name=chinook helicopter
