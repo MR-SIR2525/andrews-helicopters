@@ -1220,7 +1220,7 @@
             "startup"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playanimation @s animation.chinook.starting",
             "title @p actionbar §aStarting Engines..."
@@ -1254,7 +1254,7 @@
             "turning_off"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playanimation @s animation.chinook.landing",
             "title @p actionbar §eTurning_off_Engines..."
@@ -1287,7 +1287,7 @@
             "load_villagers"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "title @p actionbar load villagers actived",
             "ride @e[type=villager,r=15] start_riding @e[type=hc:chinook] teleport_rider"
@@ -1300,7 +1300,7 @@
             "default"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "ride @e[type=villager,r=10] stop_riding",
             "title @p actionbar mode download villagers"
@@ -1313,7 +1313,7 @@
             "red"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1325,7 +1325,7 @@
             "blue"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1337,7 +1337,7 @@
             "white"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1349,7 +1349,7 @@
             "yellow"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1361,7 +1361,7 @@
             "lime"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1373,7 +1373,7 @@
             "gray"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1385,7 +1385,7 @@
             "orange"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1397,7 +1397,7 @@
             "purple"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1409,7 +1409,7 @@
             "black"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound extra.spray_painting @p ~~~ 1.0 1.0 1.0"
           ]
@@ -1459,7 +1459,7 @@
             "turning_off"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playanimation @s animation.chinook.landing",
             "title @p actionbar §eTurning_off_Engines..."
