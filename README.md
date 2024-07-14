@@ -6,7 +6,8 @@ These are helicopters extracted and improved from (['Survival Helicopters v1.5' 
 
 ### Using the helicopters
 - Buy the helicopters from the weaponsmith villager. He can sell the helicopters and the fuel but you'll have to craft the key (need blackstone).
-- Helicopters won't despawn
 - In the cockpit, look up to ascend and look down to descend.
-
-For now, just the Apache and Chinook are included.
+- For now, just the Apache and Chinook are included.
+  - The missiles don't work on the Apache for now
+  - The Chinook can carry villagers. Look for "Load Villagers" and "Unload Villagers" in the crafting table.
+- They are a little buggy with two players riding in the same helicopter.
