@@ -361,7 +361,7 @@
       },
       "minecraft:boostable": {
         "speed_multiplier": 4,
-        "duration": 4,
+        "duration": 5,
         "boost_items": [
           {
             "replace_item": "hc:nitro",
@@ -676,10 +676,7 @@
           ]
         },
         "add": {
-          "component_groups": [
-            "on",
-            "ride_players"
-          ]
+          "component_groups": ["on"]    //"ride_players" was removed
         },
         "queue_command": {
           "command": [

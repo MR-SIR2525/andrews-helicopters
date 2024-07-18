@@ -183,7 +183,7 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 64,
-                  "price_multiplier": 0.2
+                  "price_multiplier": 0.5
                 }
               ],
               "gives": [
@@ -201,7 +201,7 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 64,
-                  "price_multiplier": 0.2
+                  "price_multiplier": 0.5
                 },
                 {
                   "item": "minecraft:diamond",
