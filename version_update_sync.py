@@ -100,6 +100,10 @@ def main():
         print("Different versions found:")
         for file, version in versions:
             print(f"{file}: {version}")
+    elif versions:
+        for file, version in versions:
+            print(f" - version {version}")
+
 
     print()
     update_choice = input("Do you want to set all versions to a new value? (yes/no): ").strip().lower()
