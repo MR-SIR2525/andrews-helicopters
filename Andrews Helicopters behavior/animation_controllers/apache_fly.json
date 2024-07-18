@@ -45,9 +45,7 @@
             }
           ],
           "on_entry": [
-            "/execute as @e[type=hc:apache] at @s run playsound apache.apache_blade @a[r=100] ~~~ 5.0 1.0 0.0"
-            // old syntax:
-            // "/execute @e[type=hc:apache] ~~~ playsound apache.apache_blade @a[r=100] ~~~ 5.0 1.0 0.0"
+            "/execute as @s at @s run playsound apache.apache_blade @a[r=100] ~~~ 5.0 1.0 0.0"
           ]
         }
       }

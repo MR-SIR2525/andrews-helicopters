@@ -25,6 +25,7 @@
         }
       }
     },
+
     "controller.animation.chinook_sound": {
       "states": {
         "ground": {
@@ -46,6 +47,7 @@
         }
       }
     },
+
     "controller.animation.chinook_sound_inside": {
       "states": {
         "ground": {
@@ -63,7 +65,6 @@
           ],
           "on_entry": [
             "/execute as @s at @s run playsound chinook.chinook_blade_inside @a[tag=pilot,r=10] ~~~ 5.0 1.0 0.0"
-            // "/execute @e[type=hc:chinook]"
           ]
         }
       }
