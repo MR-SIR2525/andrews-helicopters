@@ -1,1 +1,1 @@
-execute as @e[type=hc:apache,r=1,c=1] at @s run particle hc:polvo ~~1~
+execute as @s at @s run particle hc:polvo ~~1~

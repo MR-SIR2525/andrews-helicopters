@@ -5,15 +5,15 @@
       "animation_length": 0.2,
       "loop": true,
       "timeline": {
-        "0.0": [
-          "/execute as @p[rx=10,rxm=-10] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 1 1 true",
-          "/execute as @p[rx=14,rxm=-14] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 1 1 true"
+        "0.0": [ //shouldnt these @p test for tag = pilot??
+          // "/execute as @s at @s if entity @p[rx=10,rxm=-10] run effect @s levitation 1 1 true",
+          "/execute as @s at @s if entity @p[rx=14,rxm=-14] run effect @s levitation 1 1 true"
         ],
         "0.1497": [
-          "/execute as @p[rx=14,rxm=-14] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 0 0 true"
+          "/execute as @s at @s if entity @p[rx=14,rxm=-14] run effect @s levitation 0 0 true"
         ],
         "0.2": [
-          "/execute as @p[rx=10,rxm=-10] at @s run execute as @e[type=hc:apache,r=6,c=1] at @s run effect @s levitation 0 0 true"
+          "/execute as @s at @s if entity @p[rx=10,rxm=-10] run effect @s levitation 0 0 true"
         ]
       }
     }
