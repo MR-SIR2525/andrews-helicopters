@@ -11,7 +11,7 @@ execute as @s at @s if entity @p[r=4,tag=pilot,rx=-11,rxm=-34] run effect @s lev
 ## Descent Controls
 execute as @s at @s if entity @p[r=4,tag=pilot,rx=70,rxm=11] run effect @s slow_falling 1 0 true
 execute as @s at @s if entity @p[r=4,tag=pilot,rx=80,rxm=71] run effect @s slow_falling 1 1 true
-execute as @s at @s if entity @p[r=4,tag=pilot,rx=90,rxm=81] run effect @s slow_falling 1 3 true
+execute as @s at @s if entity @p[r=4,tag=pilot,rx=90,rxm=81] run effect @s slow_falling 1 2 true
 
 ## Detect in air for faster speed
 execute as @s at @s if block ~ ~-1 ~ air if block ~ ~-2 ~ air run effect @s speed 1 12 true
