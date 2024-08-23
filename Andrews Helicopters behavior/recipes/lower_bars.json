@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:lower_bars" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "i i",
+      "lll",
+      "   "
+    ],
+    "key": {
+      "i": {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      },
+      "l": {
+        "item": "hc:sheet",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:lower_bars",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

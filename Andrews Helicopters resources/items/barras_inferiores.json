@@ -2,11 +2,11 @@
   "format_version": "1.10.0",
   "minecraft:item": {
     "description": {
-      "identifier": "hc:barras_inferiores",
+      "identifier": "hc:lower_bars",
       "category": "Items"
     },
     "components": {
-      "minecraft:icon": "barras_inferiores",
+      "minecraft:icon": "lower_bars",
       "minecraft:render_offsets": "miscellaneous"
     }
   }

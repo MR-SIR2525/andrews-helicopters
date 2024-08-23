@@ -61,9 +61,9 @@
             "textures/items/machine_gun"
          ]
       },
-      "barras_inferiores": {
+      "lower_bars": {
          "textures": [
-            "textures/items/barras_inferiores"
+            "textures/items/lower_bars"
          ]
       },
       "barra_de_hierro":{
