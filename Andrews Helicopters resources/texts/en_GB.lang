@@ -1,3 +1,4 @@
+## paints
 item.hc:white_paint.name=White paint
 item.hc:black_paint.name=Black paint
 item.hc:blue_paint.name=Blue paint
@@ -7,6 +8,8 @@ item.hc:yellow_paint.name=Yellow paint
 item.hc:gray_paint.name=Gray paint
 item.hc:purple_paint.name=Purple paint
 item.hc:red_paint.name=Red paint
+
+## Helicopter parts
 item.hc:engine.name=Engine
 item.hc:main_propeller.name=Main propeller
 item.hc:rear_propeller.name=Rear propeller
@@ -16,15 +19,16 @@ item.hc:fuselaje3.name=Chassis 3
 item.hc:fuselaje4.name=Chassis 4
 item.hc:fuselaje5.name=Chassis 5
 item.hc:baras_inferiores.name=Lower bars
+item.hc:lower_bars.name=Lower bars
 item.hc:key.name=Key
 item.hc:key_apache.name=Apache Key
 item.hc:seat.name=Chair
 item.hc:nitro.name=Nitro
 item.hc:repair_kit.name=Repair kit
-item.hc:sheet.name=Foil
-item.hc:armored_sheet.name=Shielded foil
-item.hc:obsidian_sheet.name=Obsidian blade
-item.hc:wheel.name=Tire
+item.hc:sheet.name=Sheet Metal
+item.hc:armored_sheet.name=Armoured Sheet
+item.hc:obsidian_sheet.name=Obsidian Sheet
+item.hc:wheel.name=Wheel
 item.hc:desert_camouflaje.name=Desert camouflage
 item.hc:forest_camouflaje.name=Forest camouflaje
 item.hc:marin_camouflaje.name=Navy camouflage
@@ -33,6 +37,7 @@ item.hc:load_villagers.name=Load nearby villagers tool
 item.hc:galondehidrogeno.name=Gallon of Hydrogen
 item.hc:galondehidrogeno_empty.name=Empty Gallon of Hydrogen
 
+## Entities
 entity.hc:apache_helicopter.name=Apache helicopter
 entity.hc:apache.name=Apache helicopter
 entity.hc:helicopter.name=Helicopter
@@ -41,9 +46,17 @@ entity.hc:chinook.name=Chinook helicopter
 entity.hc:osprey.name=V22 Osprey helicopter
 entity.hc:machine_gun.name=Machine gun
 
+## Spawn eggs
+item.spawn_egg.entity.hc:helicopter.name=Helicopter
 item.spawn_egg.entity.hc:apache.name=Apache helicopter
 item.spawn_egg.entity.hc:apache_helicopter.name=Apache helicopter
-item.spawn_egg.entity.hc:helicopter.name=Helicopter
 item.spawn_egg.entity.hc:cargo_helicopter.name=Sikorsky helicopter
-item.spawn_egg.entity.hc:chinook.name=chinook helicopter
+item.spawn_egg.entity.hc:chinook.name=Chinook helicopter
 item.spawn_egg.entity.hc:osprey.name=V22 Osprey helicopter
+
+## Actions
+action.hint.exit.hc:helicopter=Exit Helicopter
+action.hint.exit.hc:apache=Exit Apache
+action.hint.exit.hc:chinook=Exit Chinook
+action.hint.exit.hc:cargo_helicopter=Exit Sikorsky
+action.hint.exit.hc:osprey=Exit V22 Osprey
