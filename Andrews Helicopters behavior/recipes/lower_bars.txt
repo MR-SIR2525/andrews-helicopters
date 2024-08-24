@@ -4,6 +4,7 @@
     "description": {
       "identifier": "hc:lower_bars" 
     },
+    //aka the Skids of some helicopters
     
     "tags": [ "crafting_table" ],
     "pattern": [
