@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hc:iron_beam",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "iron_beam",
+			"minecraft:render_offsets": "miscellaneous"
+		}
+	}
+}
