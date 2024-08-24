@@ -1,23 +1,23 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Andrews Helicopters (resources) v1.1.11",
+        "name": "Andrews Helicopters (resources) v1.1.14",
         "description": "Resource pack. Helicopters extracted and improved by MRxSIR from 'Survival Helicopters v1.5' by yimmplay.",
         "uuid": "313efae7-78b0-478e-bcde-1d153e8faf0a",
         "min_engine_version": [1, 20, 10],
-        "version": [1, 1, 11]
+        "version": [1, 1, 14]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "b03437a2-6744-4ed0-b5cc-c0eb9daa3e00",
-            "version": [1, 1, 11]
+            "version": [1, 1, 14]
         }
     ],
     "dependencies": [
         {
             "uuid": "6cd92afe-2b93-4e6d-8495-70390ea354d7",
-            "version": [1, 1, 11]
+            "version": [1, 1, 14]
         }
     ],
     "metadata": {
