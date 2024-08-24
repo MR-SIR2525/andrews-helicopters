@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "hc:obsidian_sheet" 
+    },
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "   ",
+      " l ",
+      "   "
+    ],
+    "key": {
+      "l": {
+        "item": "minecraft:obsidian",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "hc:obsidian_sheet",
+      "count": 4,
+      "data": 0
+    }
+  }
+}
