@@ -2,7 +2,7 @@
     "format_version": 2,
     "header": {
         "name": "Andrews Helicopters (behavior) v1.1.14",
-        "description": "Helicopters extracted and improved by MRxSIR from 'Survival Helicopters v1.5' by yimmplay.",
+        "description": "Helicopters extracted and improved by MRxSIR from 'Survival Helicopters v1.5' by yimmplay. Buy helicopters/fuel from lvl 3 weapon smith villagers. You'll need to craft a key. Use the key to start the helicopter from the outside (interact with it outside).",
         "uuid": "6cd92afe-2b93-4e6d-8495-70390ea354d7",
         "min_engine_version": [1, 20, 10],
         "version": [1, 1, 14]
