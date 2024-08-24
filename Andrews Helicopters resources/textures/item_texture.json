@@ -66,10 +66,10 @@
             "textures/items/lower_bars"
          ]
       },
-      "barra_de_hierro":{
+      "iron_beam":{
         "textures": [
-            "textures/items/barra_de_hierro"
-          ]
+            "textures/items/iron_beam"
+         ]
       },
       "key": {
          "textures": [
