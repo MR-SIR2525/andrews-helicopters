@@ -2,7 +2,7 @@
     "format_version": 2,
     "header": {
         "name": "Andrews Helicopters (resources) v1.1.161",
-        "description": "Resource pack. Helicopters extracted and improved by MRxSIR from 'Survival Helicopters v1.5' by yimmplay.",
+        "description": "Helicopters extracted and improved by MRxSIR from 'Survival Helicopters v1.5' by yimmplay. §aInstructions: Craft helicopters, nitro, and repair kits in the crafting table. Level 3 weapon smith villagers sell fuel and also helicopters. You'll need to craft a key (need blackstone from the Nether). Use the key to start the helicopter from the outside (interact with it outside). §eChinook: Load/Unload Villager tools. Load other nearby mobs with boat on Chinook, unload using torch.",
         "uuid": "313efae7-78b0-478e-bcde-1d153e8faf0a",
         "min_engine_version": [1, 20, 10],
         "version": [1, 1, 161]

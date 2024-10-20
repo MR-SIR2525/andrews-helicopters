@@ -12,7 +12,7 @@ Go the [Releases section](https://github.com/MR-SIR2525/andrews-helicopters/rele
 - In the cockpit, look up to ascend and look down to descend.
 - For now, just the Apache and Chinook are included.
   - The missiles don't work on the Apache for now
-  - The Chinook can carry villagers. Look for "Load Villagers" and "Unload Villagers" in the crafting table.
+  - The Chinook can carry villagers and other mobs. Look for "Load Villagers" and "Unload Villagers" in the crafting table for loading villagers. Use a boat to load other mobs and a torch to unload.
 - They are a little buggy with two players riding in the same helicopter.
 
 
