@@ -808,7 +808,9 @@
             "swing": true,
             "interact_text": "action.interact.pintar"
           },
+
           {
+            "interact_text": "action.interact.cargar",  //load
             "on_interact": {
               "filters": {
                 "all_of": [
@@ -830,10 +832,10 @@
               "target": "self"
             },
             "use_item": false,
-            "swing": true,
-            "interact_text": "action.interact.cargar"
+            "swing": true
           },
           {
+            "interact_text": "action.interact.descargar",  //unload
             "on_interact": {
               "filters": {
                 "all_of": [
@@ -844,9 +846,11 @@
                     "value": true
                   },
                   {
-                    "test": "is_skin_id",
-                    "subject": "self",
-                    "value": 5
+                    "any_of": [
+                      { "test": "is_skin_id", "subject": "self", "value": 0 },
+                      { "test": "is_skin_id", "subject": "self", "value": 4 },
+                      { "test": "is_skin_id", "subject": "self", "value": 5 }
+                    ]
                   },
                   {
                     "test": "has_equipment",
@@ -860,68 +864,7 @@
               "target": "self"
             },
             "use_item": false,
-            "swing": true,
-            "interact_text": "action.interact.descargar"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_sneaking",
-                    "subject": "player",
-                    "operator": "equals",
-                    "value": true
-                  },
-                  {
-                    "test": "is_skin_id",
-                    "subject": "self",
-                    "value": 4
-                  },
-                  {
-                    "test": "has_equipment",
-                    "subject": "player",
-                    "domain": "hand",
-                    "value": "hc:download_villagers"
-                  }
-                ]
-              },
-              "event": "download_villagers",
-              "target": "self"
-            },
-            "use_item": false,
-            "swing": true,
-            "interact_text": "action.interact.descargar"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_sneaking",
-                    "subject": "player",
-                    "operator": "equals",
-                    "value": true
-                  },
-                  {
-                    "test": "is_skin_id",
-                    "subject": "self",
-                    "value": 0
-                  },
-                  {
-                    "test": "has_equipment",
-                    "subject": "player",
-                    "domain": "hand",
-                    "value": "hc:download_villagers"
-                  }
-                ]
-              },
-              "event": "download_villagers",
-              "target": "self"
-            },
-            "use_item": false,
-            "swing": true,
-            "interact_text": "action.interact.descargar"
+            "swing": true
           }
         ]
       },
