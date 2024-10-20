@@ -809,8 +809,9 @@
             "interact_text": "action.interact.pintar"
           },
 
+          // load villagers
           {
-            "interact_text": "action.interact.cargar",  //load
+            "interact_text": "action.interact.cargar_villagers",
             "on_interact": {
               "filters": {
                 "all_of": [
@@ -834,8 +835,9 @@
             "use_item": false,
             "swing": true
           },
+          // unload villagers
           {
-            "interact_text": "action.interact.descargar",  //unload
+            "interact_text": "action.interact.descargar_villagers",
             "on_interact": {
               "filters": {
                 "all_of": [
@@ -861,6 +863,62 @@
                 ]
               },
               "event": "download_villagers",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true
+          },
+
+          // load mobs (not villagers)
+          {
+            "interact_text": "action.interact.load_mobs",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {"test": "has_tag", "subject": "self", "value": "unload_mobs"},
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "boat"
+                  }
+                ]
+              },
+              "event": "load_mobs",
+              "target": "self"
+            },
+            "use_item": false,
+            "swing": true
+          },
+
+          // unload mobs (except villagers)
+          {
+            "interact_text": "action.interact.unload_mobs",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "operator": "equals",
+                    "value": true
+                  },
+                  {"test": "has_tag", "subject": "self", "value": "load_mobs"},
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "boat"
+                  }
+                ]
+              },
+              "event": "unload_mobs",
               "target": "self"
             },
             "use_item": false,
@@ -937,11 +995,12 @@
       },
       "minecraft:is_saddled": {},
       "minecraft:rideable": {
-        "family_types": [
-          "player",
-          "villager"
-        ],
-        "interact_text": "action.interact.fly",
+        // "family_types": [
+        //   "player",
+        //   "villager"
+        // ],
+        "passenger_max_width": 1.41,  //allows boats (width 1.4)
+        "interact_text": "action.hint.ride.hc:chinook",
         "pull_in_entities": false,
         "seat_count": 23,
         "seats": [
@@ -1138,7 +1197,7 @@
         ]
       }
     },
-    
+
 
     "events": {
       "minecraft:entity_spawned": {
@@ -1223,37 +1282,57 @@
         }
       },
 
+      "load_mobs": {
+        "queue_command": {
+          "command": [
+            "tag @s remove unload_mobs",
+            "tag @s add load_mobs",
+            "title @p actionbar Loading mobs (except villagers and players)",
+            "ride @e[family=!villager,family=!hopper_marker,type=!player,r=15] start_riding @s teleport_rider"
+          ]
+        }
+      },
+
+      "unload_mobs": {
+        "queue_command": {
+          "command": [
+            "tag @s remove load_mobs",
+            "tag @s add unload_mobs",
+            "ride @e[family=!villager,family=!hopper_marker,type=!player,r=10] stop_riding",
+            "title @p actionbar Unloading mobs"
+          ]
+        }
+      },
+
       "load_villagers": {
         "remove": {
-          "component_groups": [
-            "download_villagers"
-          ]
+          "component_groups": ["download_villagers"]
         },
         "add": {
-          "component_groups": [
-            "load_villagers"
-          ]
+          "component_groups": ["load_villagers"]
         },
         "queue_command": {
           "command": [
-            "title @p actionbar load villagers actived",
-            "ride @e[type=villager,r=15] start_riding @e[type=hc:chinook] teleport_rider"
+            "title @p actionbar load villagers activated",
+            "ride @e[family=villager,r=15] start_riding @e[type=hc:chinook] teleport_rider"
           ]
         }
       },
 
       "download_villagers": {
         "add": {
-          "component_groups": [
-            "default"
-          ]
+          "component_groups": ["default"]
         },
         "queue_command": {
           "command": [
-            "ride @e[type=villager,r=10] stop_riding",
+            "ride @e[family=villager,r=10] stop_riding",
             "title @p actionbar mode download villagers"
           ]
         }
+      },
+
+      "unload_villagers": { //alias
+        "trigger": "download_villagers"
       },
       
       "hc:red": {
