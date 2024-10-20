@@ -1276,6 +1276,7 @@
           ]
         }
       },
+
       "load_villagers": {
         "remove": {
           "component_groups": [
@@ -1294,6 +1295,7 @@
           ]
         }
       },
+
       "download_villagers": {
         "add": {
           "component_groups": [
@@ -1307,6 +1309,7 @@
           ]
         }
       },
+      
       "hc:red": {
         "add": {
           "component_groups": [
