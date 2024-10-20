@@ -2,6 +2,7 @@
   "entity_sounds": {
     "entities": {
       "hc:apache": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -14,6 +15,7 @@
         }
       },
       "hc:h130": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -26,6 +28,7 @@
         }
       },
       "hc:bell47": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -38,6 +41,7 @@
         }
       },
       "hc:Chinook": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -50,6 +54,7 @@
         }
       },
       "hc:littlebird": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -62,6 +67,7 @@
         }
       },
       "hc:fachero": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -74,6 +80,7 @@
         }
       },
       "hc:chinook": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -83,6 +90,7 @@
         }
       },
       "hc:sikorsky": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -95,6 +103,7 @@
         }
       },
       "hc:samson": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -107,6 +116,7 @@
         }
       },
       "hc:scorpion": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -119,6 +129,7 @@
         }
       },
       "hc:osprey": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
@@ -128,6 +139,7 @@
         }
       },
       "hc:mi35": {
+        "stream": true,
         "volume": 1.5,
         "pitch": 1,
         "events": {
