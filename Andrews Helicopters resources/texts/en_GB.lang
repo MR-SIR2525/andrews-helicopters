@@ -60,5 +60,15 @@ item.spawn_egg.entity.hc:osprey.name=V22 Osprey helicopter
 action.hint.exit.hc:helicopter=Exit Helicopter
 action.hint.exit.hc:apache=Exit Apache
 action.hint.exit.hc:chinook=Exit Chinook
+action.hint.ride.hc:chinook=Get in Chinook
 action.hint.exit.hc:cargo_helicopter=Exit Sikorsky
 action.hint.exit.hc:osprey=Exit V22 Osprey
+
+## Actions - loading
+aciton.interact.cargar_villagers=Load Villagers
+action.interact.cargar=Load Passengers
+action.interact.descargar_villagers=Unload Villagers
+action.interact.descargar=Unload
+
+action.interact.load_mobs=Load nearby mobs
+action.interact.unload_mobs=Unload nearby mobs
