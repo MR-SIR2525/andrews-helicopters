@@ -1138,11 +1138,10 @@
         ]
       }
     },
+    
+
     "events": {
       "minecraft:entity_spawned": {
-        "remove": {
-          "component_groups": []
-        },
         "add": {
           "component_groups": [
             "off",
@@ -1150,6 +1149,7 @@
           ]
         }
       },
+
       "hc:startup": {
         "remove": {
           "component_groups": [
@@ -1170,6 +1170,7 @@
           ]
         }
       },
+
       "hc:on": {
         "remove": {
           "component_groups": [
@@ -1184,6 +1185,7 @@
           ]
         }
       },
+
       "hc:turning_off": {
         "remove": {
           "component_groups": [
@@ -1204,6 +1206,7 @@
           ]
         }
       },
+
       "hc:off": {
         "remove": {
           "component_groups": [
