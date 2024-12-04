@@ -2,7 +2,7 @@
   "format_version": "1.13.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "hc:misil1",
+      "identifier": "hc:missile1",
       "is_experimental": false,
       "is_spawnable": false,
       "is_summonable": true,
@@ -48,12 +48,12 @@
           "power": 2
         }
       },
-      "misil1:hit": {
+      "missile1:hit": {
         "minecraft:variant": {
           "value": 1
         }
       },
-      "misil1:hit2": {
+      "missile1:hit2": {
         "minecraft:collision_box": {
           "height": 0.5,
           "width": 0.5
@@ -169,20 +169,20 @@
       },
       "minecraft:type_family": {
         "family": [
-          "misil1"
+          "missile1"
         ]
       },
       "minecraft:variant": {
         "value": 0
       }
     },
-    
+
     "events": {
       "dead": {
         "add": {
           "component_groups": [
             "dead",
-            "misil1:hit"
+            "missile1:hit"
           ]
         }
       },
@@ -190,14 +190,14 @@
         "add": {
           "component_groups": [
             "minecraft:explode",
-            "misil1:hit"
+            "missile1:hit"
           ]
         }
       },
       "hit": {
         "add": {
           "component_groups": [
-            "misil1:hit2"
+            "missile1:hit2"
           ]
         }
       }

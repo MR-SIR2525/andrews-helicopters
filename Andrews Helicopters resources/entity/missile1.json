@@ -2,12 +2,12 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "hc:misil1",
+      "identifier": "hc:missile1",
       "render_controllers": [
-        "controller.render.misil1"
+        "controller.render.missile1"
       ],
       "animations": {
-        "move": "animation.misil1.move"
+        "move": "animation.missile1.move"
       },
       "textures": {
         "default": "textures/armas/misiles1"

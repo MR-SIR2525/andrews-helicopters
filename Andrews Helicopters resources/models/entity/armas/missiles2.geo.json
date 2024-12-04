@@ -356,7 +356,7 @@
 					]
 				},
 				{
-					"name": "misil2",
+					"name": "missile2",
 					"parent": "misiles2",
 					"pivot": [3.8, -35, 45],
 					"cubes": [
