@@ -39,6 +39,8 @@
         "empty_hydrogen": "controller.animation.empty_hydrogen"
       }
     },
+
+
     "component_groups": {
       "off": {
         "minecraft:skin_id": {
@@ -233,6 +235,8 @@
         }
       }
     },
+
+
     "components": {
       "minecraft:is_saddled": {},
       "minecraft:rideable": {
@@ -619,6 +623,8 @@
         ]
       }
     },
+    
+    
     "events": {
       "minecraft:entity_spawned": {
         "add": {
@@ -667,6 +673,7 @@
           }
         ]
       },
+
       "hc:on": {
         "remove": {
           "component_groups": [
@@ -676,7 +683,7 @@
           ]
         },
         "add": {
-          "component_groups": ["on"]    //"ride_players" was removed
+          "component_groups": ["on"]
         },
         "queue_command": {
           "command": [
@@ -684,6 +691,7 @@
           ]
         }
       },
+
       "hc:turning_off": {
         "remove": {
           "component_groups": [
@@ -704,6 +712,7 @@
           ]
         }
       },
+
       "hc:off": {
         "remove": {
           "component_groups": [
@@ -724,6 +733,7 @@
           ]
         }
       },
+
       "tamed": {
         "add": {
           "component_groups": [
@@ -731,6 +741,7 @@
           ]
         }
       },
+
       "load_guns": {
         "add": {
           "component_groups": [
@@ -743,6 +754,7 @@
           ]
         }
       },
+
       "ride_players": {
         "remove": {
           "component_groups": [
@@ -755,6 +767,7 @@
           ]
         }
       },
+      
       "default": {
         "add": {
           "component_groups": [
@@ -767,6 +780,7 @@
           ]
         }
       },
+
       "desert": {
         "add": {
           "component_groups": [
@@ -779,6 +793,7 @@
           ]
         }
       },
+
       "forest": {
         "add": {
           "component_groups": [
@@ -791,6 +806,7 @@
           ]
         }
       },
+
       "marin": {
         "add": {
           "component_groups": [
@@ -803,6 +819,7 @@
           ]
         }
       },
+
       "hc:charged_hydrogen": {
         "add": {
           "component_groups": [
@@ -810,6 +827,7 @@
           ]
         }
       },
+
       "hc:no_hydrogen": {
         "remove": {
           "component_groups": [
@@ -826,6 +844,7 @@
           ]
         }
       },
+
       "hc:start_consuming_hydrogen": {
         "add": {
           "component_groups": [
@@ -833,6 +852,7 @@
           ]
         }
       },
+
       "hc:stop_consuming_hydrogen": {
         "remove": {
           "component_groups": [
@@ -854,6 +874,7 @@
           ]
         }
       },
+
       "hc:hydrogen_consuming": {
         "sequence": [
           {
@@ -1362,6 +1383,7 @@
           }
         ]
       },
+      
       "hc:to_fuel_h": {
         "add": {
           "component_groups": [
