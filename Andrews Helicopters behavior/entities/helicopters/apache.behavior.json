@@ -47,6 +47,7 @@
           "value": 0
         }
       },
+
       "startup": {
         "minecraft:skin_id": {
           "value": 1
@@ -59,6 +60,7 @@
           }
         }
       },
+
       "on": {
         "minecraft:skin_id": {
           "value": 2
@@ -76,6 +78,7 @@
         },
         "minecraft:is_tamed": {}
       },
+
       "turning_off": {
         "minecraft:skin_id": {
           "value": 3
@@ -88,11 +91,7 @@
           }
         }
       },
-      "load_guns": {
-        "minecraft:addrider": {
-          "entity_type": "hc:machine_gun"
-        }
-      },
+
       "default": {
         "minecraft:variant": {
           "value": 0
@@ -113,9 +112,11 @@
           "value": 3
         }
       },
+
       "charged_hydrogen": {
         "minecraft:is_charged": {}
       },
+
       "consuming_hydrogen": {
         "minecraft:timer": {
           "time": 60,
@@ -125,6 +126,13 @@
           }
         }
       },
+
+      "load_guns": {
+        "minecraft:addrider": {
+          "entity_type": "hc:machine_gun"
+        }
+      },
+
       "addrider": {
         "minecraft:spawn_entity": {
           "entities": [
@@ -139,6 +147,22 @@
           ]
         }
       },
+
+      "fire_missile": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "min_wait_time": 0,
+              "max_wait_time": 0,
+              "spawn_entity": "hc:missile",
+              // "spawn_event": "xxx",
+              "single_use": true,
+              "num_to_spawn": 1
+            }
+          ]
+        }
+      },
+
       "gravity_true": {
         "minecraft:physics": {
           "has_gravity": true
@@ -149,6 +173,7 @@
           "has_gravity": false
         }
       },
+
       "hydrogen0": {
         "minecraft:mark_variant": {
           "value": 0
@@ -685,6 +710,7 @@
         "add": {
           "component_groups": ["on"]
         },
+        // "trigger": "ride_players",
         "queue_command": {
           "command": [
             "tag @s add engine_on"
@@ -1383,7 +1409,7 @@
           }
         ]
       },
-      
+
       "hc:to_fuel_h": {
         "add": {
           "component_groups": [

@@ -80,6 +80,7 @@
         }
       }
     },
+
     "components": {
       "minecraft:behavior.hurt_by_target": {
         "entity_types": {
@@ -175,6 +176,7 @@
         "value": 0
       }
     },
+    
     "events": {
       "dead": {
         "add": {
