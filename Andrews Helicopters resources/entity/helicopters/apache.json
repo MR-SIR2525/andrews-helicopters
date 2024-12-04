@@ -15,19 +15,19 @@
         "hydrogen_full": "textures/hydrogenmeter/hydrogen_full",
         "hydrogen_medium": "textures/hydrogenmeter/hydrogen_medium",
         "hydrogen_low": "textures/hydrogenmeter/hydrogen_low",
-        "misiles1": "textures/armas/misiles1",
+        "missiles1": "textures/armas/missiles1",
         "missiles2": "textures/armas/missiles2"
       },
       "geometry": {
         "default": "geometry.apache",
         "apache_h_meter": "geometry.apache_h_meter",
-        "misiles1": "geometry.apache.misiles1",
+        "missiles1": "geometry.apache.missiles1",
         "missiles2": "geometry.apache.missiles2"
       },
       "render_controllers": [
         "controller.render.apache",
         "controller.render.apache_h_meter",
-        "controller.render.apache.misiles1",
+        "controller.render.apache.missiles1",
         "controller.render.apache.missiles2"
       ],
       "spawn_egg": {

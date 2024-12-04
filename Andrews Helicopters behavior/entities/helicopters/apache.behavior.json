@@ -154,7 +154,7 @@
             {
               "min_wait_time": 0,
               "max_wait_time": 0,
-              "spawn_entity": "hc:missile",
+              "spawn_entity": "hc:missile1",
               // "spawn_event": "xxx",
               "single_use": true,
               "num_to_spawn": 1
@@ -757,6 +757,12 @@
           "command": [
             "tag @s remove engine_on"
           ]
+        }
+      },
+
+      "fire_missile": {
+        "add": {
+          "component_groups": ["fire_missile"]
         }
       },
 
