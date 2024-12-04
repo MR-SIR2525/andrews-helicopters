@@ -4,15 +4,15 @@
       "controller.render.ch47_chinook": {
          "materials": [
             {
-					"*": "Material.default", 
-     "lightwhite1On": "Material.flashes",
-     "lightwhite2On": "Material.flashes", 
-     "lightwhite4On": "Material.flashes",
-     "lightwhite4On2": "Material.flashes",
-     "greenlightOn": "Material.flashes",
-     "redlightOn": "Material.flashes",
-     "mainlight1On": "Material.flashes",
-     "mainlight2On": "Material.flashes"
+               "*": "Material.default",
+               "lightwhite1On": "Material.flashes",
+               "lightwhite2On": "Material.flashes",
+               "lightwhite4On": "Material.flashes",
+               "lightwhite4On2": "Material.flashes",
+               "greenlightOn": "Material.flashes",
+               "redlightOn": "Material.flashes",
+               "mainlight1On": "Material.flashes",
+               "mainlight2On": "Material.flashes"
             }
          ],
          "geometry": "Geometry.default",
@@ -22,31 +22,31 @@
          "arrays": {
             "textures": {
                "Array.skins": [
-						"Texture.white",
-						"Texture.blue",
-						"Texture.red",
-						"Texture.yellow",
-						"Texture.purple",
-						"Texture.black",
-						"Texture.gray",
-						"Texture.lime",
-						"Texture.orange"
+                  "Texture.white",
+                  "Texture.blue",
+                  "Texture.red",
+                  "Texture.yellow",
+                  "Texture.purple",
+                  "Texture.black",
+                  "Texture.gray",
+                  "Texture.lime",
+                  "Texture.orange"
                ]
             }
          },
          "is_hurt_color": {},
          "on_fire_color": {}
       },
-        "controller.render.ch47_chinook_h_meter": {
-   "geometry": "Geometry.ch47_chinook_h_meter",
-   "materials": [
-    {
-     "*": "Material.default"
-    }
-   ],
-   "textures": [
-    "query.mark_variant <= 4 ? Texture.hydrogen_low : (query.mark_variant > 4 && query.mark_variant <= 8 ? Texture.hydrogen_medium : Texture.hydrogen_full)"
-   ]
-  }
+      "controller.render.ch47_chinook_h_meter": {
+         "geometry": "Geometry.ch47_chinook_h_meter",
+         "materials": [
+            {
+               "*": "Material.default"
+            }
+         ],
+         "textures": [
+            "query.mark_variant <= 4 ? Texture.hydrogen_low : (query.mark_variant > 4 && query.mark_variant <= 8 ? Texture.hydrogen_medium : Texture.hydrogen_full)"
+         ]
+      }
    }
 }
