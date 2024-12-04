@@ -16,7 +16,7 @@
 					"pivot": [-1.155, 1.14583, 2.7893]
 				},
 				{
-					"name": "misil",
+					"name": "missile",
 					"parent": "body",
 					"pivot": [-1.155, 1.14583, 2.7893],
 					"cubes": [

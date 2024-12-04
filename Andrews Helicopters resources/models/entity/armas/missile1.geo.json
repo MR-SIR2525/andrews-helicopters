@@ -19,7 +19,7 @@
 					}
 				},
 				{
-					"name": "misil",
+					"name": "missile",
 					"parent": "body",
 					"pivot": [48, -40.9, 0],
 					"cubes": [

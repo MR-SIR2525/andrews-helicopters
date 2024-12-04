@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.apache.misiles2",
+				"identifier": "geometry.apache.missiles2",
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 31,
@@ -17,7 +17,7 @@
 					"rotation": [-4, 0, 0]
 				},
 				{
-					"name": "misiles2",
+					"name": "missiles2",
 					"parent": "todo",
 					"pivot": [-40, 5, 0],
 					"cubes": [
@@ -207,8 +207,8 @@
 					}
 				},
 				{
-					"name": "misil",
-					"parent": "misiles2",
+					"name": "missile",
+					"parent": "missiles2",
 					"pivot": [-5.2, -35, 45],
 					"cubes": [
 						{
@@ -357,7 +357,7 @@
 				},
 				{
 					"name": "missile2",
-					"parent": "misiles2",
+					"parent": "missiles2",
 					"pivot": [3.8, -35, 45],
 					"cubes": [
 						{
@@ -506,7 +506,7 @@
 				},
 				{
 					"name": "misil3",
-					"parent": "misiles2",
+					"parent": "missiles2",
 					"pivot": [3.8, -40, 45],
 					"cubes": [
 						{
@@ -655,7 +655,7 @@
 				},
 				{
 					"name": "misil4",
-					"parent": "misiles2",
+					"parent": "missiles2",
 					"pivot": [-5.2, -40, 45],
 					"cubes": [
 						{
@@ -804,7 +804,7 @@
 				},
 				{
 					"name": "misil5",
-					"parent": "misiles2",
+					"parent": "missiles2",
 					"pivot": [-0.7, -40, 45],
 					"cubes": [
 						{
@@ -953,7 +953,7 @@
 				},
 				{
 					"name": "misil6",
-					"parent": "misiles2",
+					"parent": "missiles2",
 					"pivot": [-0.7, -35, 45],
 					"cubes": [
 						{
