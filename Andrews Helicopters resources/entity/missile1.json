@@ -10,7 +10,7 @@
         "move": "animation.missile1.move"
       },
       "textures": {
-        "default": "textures/armas/misiles1"
+        "default": "textures/armas/missiles1"
       },
       "geometry": {
         "default": "geometry.apache_misil1"

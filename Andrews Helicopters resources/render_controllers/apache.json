@@ -29,15 +29,15 @@
       "is_hurt_color": {},
       "on_fire_color": {}
     },
-    "controller.render.apache.misiles1": {
-      "geometry": "Geometry.misiles1",
+    "controller.render.apache.missiles1": {
+      "geometry": "Geometry.missiles1",
       "materials": [
         {
           "*": "Material.default"
         }
       ],
       "textures": [
-        "Texture.misiles1"
+        "Texture.missiles1"
       ],
       "is_hurt_color": {},
       "on_fire_color": {}
